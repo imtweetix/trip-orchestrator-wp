@@ -1,0 +1,29 @@
+@include phone-portrait {
+    .mkdf-tours-list-item {
+        .mkdf-tours-list-item-table {
+            display: block;
+        }
+
+        .mkdf-tours-list-item-image-holder {
+            display: block;
+            width: 100%;
+            padding-right: 0;
+
+            a {
+                position: relative;
+                background-image: none;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        .mkdf-tours-list-item-content-holder {
+            display: block;
+            width: 100%;
+            padding-left: 0;
+            padding-top: 30px;
+        }
+    }
+}

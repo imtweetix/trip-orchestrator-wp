@@ -1,0 +1,144 @@
+
+/* Gallery type styles
+   ========================================================================== */
+
+.mkdf-tours-type-masonry{
+
+    &:not(.mkdf-tour-list-images-fixed){
+
+        .mkdf-tours-masonry-item{
+            height: auto!important;
+        }
+    }
+
+    .mkdf-tours-masonry-item {
+        @include mkdfRelativeHolderLayout();
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        &:hover{
+            .mkdf-tours-gim-image {
+                &:after{
+                    opacity: 1;
+                }
+            }
+            .mkdf-tours-gim-excerpt{
+                opacity: 1;
+            }
+        }
+
+        .mkdf-tours-gim-holder-inner {
+            position: relative;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        .mkdf-tours-gim-image {
+            @include mkdfRelativeHolderLayout();
+            height: auto;
+            line-height: 0;
+            img {
+                height: auto;
+            }
+
+            &:after {
+                content:'';
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                z-index: 10;
+                @include mkdfTransition(opacity 1s cubic-bezier(0.29, 0.22, 0.11, 1));
+            }
+
+        }
+        .mkdf-tours-gim-content-holder {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+            height: 100%;
+            padding: 40px 36px;
+            box-sizing: border-box;
+        }
+
+        .mkdf-tours-gim-content-outer {
+            @include mkdfTableLayout();
+            line-height: 1em;
+        }
+
+        .mkdf-tours-gim-content-inner {
+            @include mkdfTableCellLayout();
+            vertical-align: bottom;
+        }
+
+        .mkdf-tours-gim-main-info{
+            @include mkdfTransition(all .45s cubic-bezier(0.22, 0.82, 0.11, 1.33) .05s);
+
+            .mkdf-tour-item-label {
+                z-index: 30;
+                position: relative;
+            }
+
+            .mkdf-tour-title {
+                margin: 0;
+                padding: 2px 0 0;
+                color: #fff;
+            }
+        }
+
+        .mkdf-tours-gim-excerpt {
+            margin: 7px 0 19px;
+            line-height: 27px;
+            position: relative;
+            overflow: hidden;
+            opacity:0;
+            color: #fff;
+            @include mkdfTransition(opacity .15s cubic-bezier(0.29, 0.22, 0.11, 1));
+        }
+
+        .mkdf-tours-price-holder {
+            color: #fff;
+            font-size: 25px;
+            @include mkdfTransition(all .45s cubic-bezier(0.22, 0.82, 0.11, 1.33) .05s);
+        }
+
+        &:hover {
+            .mkdf-tours-gim-content-holder{
+                opacity: 1;
+            }
+
+            .mkdf-tours-gim-main-info {
+                margin-bottom: 0 !important;
+                @include mkdfTransition(all .6s cubic-bezier(0.26, 1.54, 0.25, 2) 50ms);
+            }
+        }
+
+        .mkdf-tours-masonry-item-link {
+            @include mkdfAbsoluteHolderLayout();
+            z-index: 100;
+        }
+    }
+
+    &.mkdf-tour-list-images-fixed{
+        .mkdf-tours-masonry-item{
+            .mkdf-tours-gim-image{
+                height: 100%;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+/* Gallery type styles end
+	========================================================================== */

@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Blog List shortcode - Masonry type style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+	
+	&.mkdf-bl-masonry {
+		transition: none !important;
+		overflow: visible !important;
+		
+		.mkdf-blog-list {
+			opacity: 0;
+			@include mkdfTransition(opacity $quick-transition $theme-easing);
+		}
+
+        .mkdf-bli-info {
+            margin: 13px 0 0;
+        }
+		
+		.mkdf-bl-item {
+			vertical-align: top;
+			z-index: 100;
+
+            .mkdf-post-title a:hover {
+                color: $first-main-color;
+            }
+
+		}
+		
+		.mkdf-bl-item,
+		.mkdf-bl-grid-sizer {
+			width: 100%;
+		}
+		
+		.mkdf-bl-grid-gutter {
+			width: 0;
+		}
+
+		.mkdf-post-image {
+			margin:0;
+
+			a {
+				overflow:hidden;
+
+				img {
+					@include mkdfTransitionTransform(.25s $theme-easing);
+				}
+
+				&:after {
+					display:none;
+				}
+			}
+		}
+
+        .mkdf-bli-content{
+        	margin-top:25px;
+            margin-bottom: 20px;
+        }
+
+        .mkdf-bli-inner {
+        	&:hover {
+        		a {
+        			img {
+        				@include mkdfTransform(scale(1.06));
+        			}
+        		}
+        	}
+        }
+		
+		$masonry_columns_number: ('two', 'three', 'four', 'five');
+		
+		@for $i from 0 to length($masonry_columns_number) {
+			&.mkdf-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.mkdf-bl-item,
+				.mkdf-bl-grid-sizer {
+					width: $column_width;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Blog List shortcode - Masonry type style - end
+   ========================================================================== */

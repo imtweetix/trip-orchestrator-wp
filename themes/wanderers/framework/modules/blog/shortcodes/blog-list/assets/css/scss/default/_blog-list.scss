@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Blog List shortcode global style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+	@include mkdfRelativeHolderLayout();
+	clear: both;
+	
+	.mkdf-blog-list {
+		@include mkdfRelativeHolderLayout();
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.mkdf-bl-item {
+		@include mkdfRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-bli-inner {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	.mkdf-bli-content {
+		@include mkdfRelativeHolderLayout();
+		box-sizing: border-box;
+	}
+	
+	.mkdf-post-image {
+		@include mkdfRelativeHolderLayout();
+		margin: 0 0 25px;
+		
+		a {
+			display: block;
+			@include mkdfImageOverlayHoverStyle();
+		}
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.mkdf-bli-info {
+		@include mkdfRelativeHolderLayout();
+		margin: 23px 0 0;
+		clear: both;
+		
+		> div {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 15px;
+			line-height: 1.2;
+			float: left;
+			padding: 0 33px 5px 0;
+            color: #c2c2c2;
+			
+			&:last-child {
+				padding: 0 0 5px;
+			}
+			
+			a {
+				color: #c2c2c2;
+				
+				&:hover {
+					color: $first-main-color;
+				}
+
+                &.mkdf-like{
+                    &.liked{
+
+                        color: $first-main-color;
+                    }
+
+                    span{
+                        font-size: 15px;
+                    }
+                }
+			}
+
+            .icon_calendar,
+            .icon_chat{
+                font-size: 14px;
+                margin-right: 6px;
+            }
+
+            .icon_tag {
+                font-size: 16px;
+                color: #c2c2c2;
+            }
+
+            .icon_heart {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+		}
+	}
+	
+	.mkdf-post-title {
+		margin: 0;
+
+		a:hover {
+			color:#303030;
+		}
+	}
+	
+	.mkdf-post-excerpt {
+		@include mkdfRelativeHolderLayout();
+		margin: 20px 0 0;
+		
+		p {
+			margin: 0;
+		}
+		
+		&:after {
+			content: '...';
+		}
+	}
+	
+	.mkdf-post-read-more-button {
+		@include mkdfRelativeHolderLayout();
+		margin: 12px 0 0;
+	}
+}
+/* ==========================================================================
+   Blog List shortcode global style - end
+   ========================================================================== */

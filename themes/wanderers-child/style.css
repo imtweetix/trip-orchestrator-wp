@@ -1,0 +1,350 @@
+/*
+Theme Name: Wanderers Child
+Theme URI: https://wanderers.qodeinteractive.com
+Description: An Adventurous Theme for Travel and Tourism
+Author: Mikado Themes
+Author URI: http://themeforest.net/user/mikado-themes
+Version: 1.0.0
+Text Domain: wanderers
+Template: wanderers
+*/
+
+/* .form-container {
+    max-width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.form-col {
+    flex: 1 0 0%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-info-section-part.mkdf-tour-item-main-info {
+    display: none;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-item-section#tour-item-info-id {
+    padding-bottom: 0;
+}
+
+.mkdf-tour-item-footer-buttons {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+.mkdf-tour-item-footer-buttons li {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.mkdf-tour-item-footer-buttons li a {
+    display: block;
+    margin: 0 8px;
+}
+
+.mkdf-tour-item-single-holder .mkdf-tour-tabs.mkdf-horizontal .mkdf-tabs-nav li a {
+    text-align: center;
+}
+
+.mkdf-tours-gallery-item .mkdf-tours-gallery-title-holder .mkdf-tour-title {
+    font-family: Kristi;
+    color: #ffcc05;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.mkdf-tour-item-label {
+    font-family: "Playfair Display",
+        serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+}
+
+.mkdf-tours-gallery-item .mkdf-tours-gallery-item-content-holder {
+    padding: 20px;
+}
+
+.mkdf-tours-gallery-item .mkdf-tours-gallery-title-holder .mkdf-tour-title {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.29, 0.22, 0.11, 1);
+}
+
+.mkdf-tours-gallery-item:hover .mkdf-tours-gallery-title-holder .mkdf-tour-title {
+    opacity: 1;
+}
+
+.mkdf-tours-gallery-item .mkdf-tours-gallery-item-image:after {
+    opacity: 0.3;
+}
+
+.mkdf-custom-bg {
+    background: url("/wp-content/uploads/2018/03/boat-on-italy-water-scaled.jpg") center/cover no-repeat;
+}
+
+.mkdf-section-title-holder h2.mkdf-st-text {
+    color: #818181;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+.mkdf-blog-holder.mkdf-blog-single article .mkdf-post-heading {
+    display: none;
+}
+
+.mkdf-padding-30 {
+    padding: 30px;
+}
+
+.mkdf-drop-down .narrow .second .inner ul li {
+    width: 215px;
+}
+
+.mkdf-title-holder .mkdf-title-wrapper .mkdf-page-title {
+    visibility: hidden;
+}
+
+.mkdf-tours-gallery-item .mkdf-tours-gallery-item-price-holder .mkdf-tours-price-holder .mkdf-tours-item-price::before {
+    content: "from ";
+    font-size: 14px;
+}
+
+.mkdf-tours-filter-horizontal .mkdf-tours-filters-fields-holder {
+    padding: 0;
+}
+
+.mkdf-tours-filter-horizontal,
+.mkdf-tours-filter-horizontal.mkdf-tours-filter-skin-light {
+    background-color: transparent;
+}
+
+.mkdf-tours-filter-horizontal .mkdf-tours-filter-col {
+    margin-right: 15px;
+    width: 27%;
+}
+
+.mkdf-tours-filter-horizontal .mkdf-tours-filter-col:last-child {
+    margin-right: 0;
+}
+
+.mkdf-tours-filters-fields-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.mkdf-font-light,
+.mkdf-font-light h2,
+.mkdf-font-light h3,
+.mkdf-font-light h4,
+.mkdf-font-light h5,
+.mkdf-font-light h6,
+.home-testimonials {
+    color: #fff !important;
+}
+
+.mkdf-reviews-list-info.mkdf-reviews-simple {
+    display: none;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-item-short-info {}
+
+.mkdf-tours-single-info-item:nth-child(2) {
+    display: none !important;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-item-section#tour-item-info-id {
+    padding-top: 30px;
+}
+
+.mkdf-tour-item-single-holder .mkdf-tour-item-section#tour-item-plan-id {
+    padding-top: 0;
+}
+
+.mkdf-tour-item-single-holder .mkdf-tour-item-section#tour-item-plan-id .mkdf-route-id {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.mkdf-tour-day-by-day-holder {
+    margin-bottom: 67px;
+}
+
+.mkdf-tour-day-by-day-holder h3 {
+    margin-bottom: 16px;
+}
+
+.mkdf-tour-gallery-item-holder {
+    display: none;
+}
+
+.mkdf-tours-destination-item-holder .mkdf-tours-destination-item-content-inner::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: background-color 0.3s ease;
+}
+
+.mkdf-tours-destination-item-holder .mkdf-tours-destination-item-content-inner:hover::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.home-testimonials h3 {
+    color: #818181;
+}
+
+.home-testimonials .testimonial-name {
+    margin-top: 20px;
+}
+
+.mkdf-row-grid-section {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.mkdf-main-menu>ul>li>a>span.item_outer .item_text {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.mkdf-title-holder {
+    background-size: cover;
+    background-position: center;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-item-short-info .mkdf-tours-single-info-item,
+.mkdf-tour-item-single-holder article .mkdf-tour-item-title-holder .mkdf-tour-item-price-holder .mkdf-tour-item-price-text,
+.mkdf-tour-item-single-holder article .mkdf-tour-item-short-info .mkdf-tours-tour-categories-holder a,
+.mkdf-tour-item-single-holder article .mkdf-tour-item-short-info .mkdf-tours-tour-categories-item a {
+    color: #808285;
+}
+
+.mkdf-tour-item-price-holder::before {
+    content: "from ";
+}
+
+.mkdf-tour-item-single-holder .mkdf-tour-item-section#tour-item-plan-id .mkdf-route-id {
+    background-color: #000;
+    color: #ffcc05;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-main-info-holder li.mkdf-tours-checked-attributes {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-main-info-holder li:last-child {
+    display: none;
+}
+
+.mkdf-tour-item-single-holder article .mkdf-tour-main-info-holder li .mkdf-value .mkdf-tour-main-info-attr {
+    float: none;
+    width: 100%;
+}
+
+.mkdf-tours-booking-form-holder {
+    display: none;
+}
+
+aside.mkdf-sidebar .widget.mkdf-contact-form-7-widget {
+    padding: 30px 18px 0;
+    background-color: #f9f9f9;
+    background-image: url(/wp-content/plugins/mkdf-tours/assets/img/booking-sidebar-image.png);
+}
+
+.single aside.mkdf-sidebar .widget.mkdf-contact-form-7-widget {
+    margin: 30px 0 28px !important;
+}
+
+aside.mkdf-sidebar .widget.mkdf-contact-form-7-widget h4 {
+    margin-bottom: 15px;
+}
+
+aside.mkdf-sidebar .widget.mkdf-contact-form-7-widget input.wpcf7-form-control.wpcf7-submit {
+    width: 100%;
+}
+
+.mkdf-page-footer .mkdf-widget-title {
+    color: #fff;
+}
+
+.mkdf-image-gallery .mkdf-ig-grid.mkdf-ig-two-columns .mkdf-ig-image {
+    width: 50% !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .mkdf-tour-item-single-holder .mkdf-tour-tabs.mkdf-horizontal .mkdf-tabs-nav li {
+        width: 50%;
+    }
+
+    .mkdf-subtitle-holder .mkdf-subtitle-wrapper .mkdf-page-subtitle {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    aside.mkdf-sidebar .widget.mkdf-contact-form-7-widget {
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 949px) {
+    .mkdf-tours-filter-horizontal .mkdf-tours-filter-col {
+        margin-right: 0;
+        width: 33.33%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .vc_hidden_sm {
+        display: none;
+    }
+
+    .form-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .form-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .mkdf-tour-item-footer-buttons li {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mkdf-tours-filter-horizontal .mkdf-tours-filter-col {
+        width: 100%;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit {
+        width: 100%;
+    }
+} */

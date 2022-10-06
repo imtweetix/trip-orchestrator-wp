@@ -1,0 +1,118 @@
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.mkdf-blog-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+
+    .mkdf-blog-single-navigation-inner {
+        padding: 62px 0 30px;
+    }
+
+    .mkdf-blog-single-prev,
+    .mkdf-blog-single-next {
+
+        color: $default-heading-color;
+        display: table;
+        width: auto;
+        max-width: 30%;
+
+        .mkdf-blog-single-nav-mark {
+            font-size: 48px;
+            line-height: inherit;
+            color: inherit;
+            @include mkdfTransition(background-color $quick-transition $theme-easing);
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        .mkdf-blog-single-nav-label {
+            margin: 0;
+        }
+
+        &:hover {
+            .mkdf-blog-single-nav-mark {
+                background-color: $default-heading-color;
+            }
+        }
+    }
+
+    .mkdf-blog-single-prev {
+        float: left;
+
+        .mkdf-blog-single-nav-mark,
+        .mkdf-blog-single-nav-label {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .mkdf-blog-single-nav-label {
+            padding-left: 14px;
+        }
+
+        .mkdf-blog-single-nav-mark {
+            margin: 0 14px 0 0;
+            width: 65px;
+            height: 65px;
+            background-color: $first-main-color;
+            color: #fff;
+            text-align: center;
+            line-height: 63px;
+        }
+    }
+
+    .mkdf-blog-single-next {
+        float: right;
+        direction: rtl;
+
+        .mkdf-blog-single-nav-mark,
+        .mkdf-blog-single-nav-label {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .mkdf-blog-single-nav-label{
+            padding-right: 14px;
+        }
+
+        .mkdf-blog-single-nav-mark {
+            margin: 0 0 0 14px;
+            width: 65px;
+            height: 65px;
+            background-color: $first-main-color;
+            color: #fff;
+            text-align: center;
+            line-height: 63px;
+        }
+    }
+}
+
+.mkdf-single-links-pages {
+    clear: both;
+    margin: 20px 0 5px;
+
+    .mkdf-single-links-pages-inner {
+
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 6px;
+        }
+
+        > span {
+            color: $first-main-color;
+        }
+    }
+}
+/* Single posts navigation styles - end
+    ====================================================================== */

@@ -1,0 +1,45 @@
+.mkdf-tours-destination-list {
+    &.mkdf-destinations-masonry{
+
+        .mkdf-tours-row-inner-holder {
+            opacity: 0;
+            @include mkdfTransition(opacity 0.15s ease-out);
+        }
+
+        .mkdf-tours-list-grid-gutter {
+            width: 0;
+        }
+
+        .mkdf-tours-destination-list-item {
+            overflow: hidden;
+            .mkdf-tours-destination-item-holder {
+                height: 100%;
+            }
+
+            &.mkdf-size-large-height,
+            &.mkdf-size-large-width-height {
+                .mkdf-tours-destination-item-holder {
+
+                    a {
+                        height: 100%;
+                        position: relative;
+                        display: block;
+                    }
+
+                    .mkdf-tours-destination-item-image {
+                        height: 100%;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                            max-width: initial;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Blog List - Standard style - begin
+   ========================================================================== */
+
+.mkdf-blog-holder {
+	
+    &.mkdf-blog-standard {
+	    
+        article {
+            margin: 0 0 69px;
+            padding: 0;
+
+            &.mkdf-post-has-media {
+	            
+                .mkdf-post-heading {
+                    margin-bottom: 50px;
+                }
+            }
+
+            &.format-quote{
+                .mkdf-post-mark {
+                    position: absolute;
+                    right: -38px;
+                    display: block;
+                    top: 90px;
+                    overflow: hidden;
+
+                    .mkdf-quote-mark {
+                        font-family: Kristi;
+                        font-weight: 400;
+                        line-height: 135px;
+                        overflow: hidden;
+                        font-size: 300px;
+                        display: block;
+                    }
+                }
+            }
+
+            &.format-quote,
+            &.format-link{
+                margin-bottom: 80px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Standard style - end
+   ========================================================================== */

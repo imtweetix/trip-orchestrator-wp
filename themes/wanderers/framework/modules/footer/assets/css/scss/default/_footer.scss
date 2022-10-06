@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+
+.mkdf-page-footer {
+    @include mkdfRelativeHolderLayout();
+    z-index: 100;
+    box-sizing: border-box;
+    color: #bdbdbd;
+
+    .mkdf-footer-top-holder {
+        @include mkdfRelativeHolderLayout();
+        background-color: #1c1c1c;
+        box-sizing: border-box;
+
+        .mkdf-footer-top-alignment-center {
+            text-align: center;
+        }
+	    
+        .mkdf-footer-top-alignment-left {
+            text-align: left;
+        }
+	    
+        .mkdf-footer-top-alignment-right {
+            text-align: right;
+        }
+
+        .mkdf-footer-top-inner{
+            box-sizing: border-box;
+	        
+            &.mkdf-grid{
+                padding: 92px 0 76px
+            }
+	        
+            &.mkdf-full-width{
+                padding: 92px 40px;
+            }
+        }
+    }
+
+    .mkdf-footer-bottom-holder {
+        @include mkdfRelativeHolderLayout();
+        background-color: #1c1c1c;
+        box-sizing: border-box;
+        text-align: center;
+
+        .mkdf-footer-bottom-inner {
+            box-sizing: border-box;
+	        
+            &.mkdf-grid {
+                padding: 26px 0;
+                border-top: 1px solid #323232;
+            }
+	        
+            &.mkdf-full-width {
+                padding: 19px 40px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */

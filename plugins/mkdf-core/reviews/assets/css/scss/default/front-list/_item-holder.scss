@@ -1,0 +1,25 @@
+.mkdf-comment-list {
+    .mkdf-comment-name {
+        float: none;
+    }
+    .mkdf-review-rating {
+        display: block;
+        width: 100%;
+    }
+    .mkdf-rating-inner {
+        padding-bottom: 10px;
+        display: inline-block;
+        width: 33%;
+        .mkdf-rating-value{
+            color: $first-main-color;
+
+            i{
+                margin: 0 6px 0 0;
+            }
+        }
+
+        @include laptop-landscape-large{
+            width: 44%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">tour-item</custom-type>
+		<custom-type translate="1">destinations</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="1">tour-category</taxonomy>
+		<taxonomy translate="1">review-criteria</taxonomy>
+		<taxonomy translate="1">tour-attribute</taxonomy>
+	</taxonomies>
+</wpml-config>

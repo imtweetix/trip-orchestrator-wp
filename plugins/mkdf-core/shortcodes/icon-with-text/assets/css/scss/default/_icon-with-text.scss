@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-iwt {
+	@include mkdfRelativeHolderLayout();
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include mkdfTransition(all $quick-transition $theme-easing );
+
+        .mkdf-icon-element {
+            @include mkdfTransition(all $quick-transition $theme-easing );
+        }
+
+        .mkdf-top-bar &:hover {
+            .mkdf-icon-element {
+                color: inherit !important; /* top bar issue */
+            }
+        }
+    }
+	
+	.mkdf-iwt-icon {
+
+		.mkdf-icon-shortcode {
+			line-height: 1;
+			
+			&.mkdf-circle,
+			&.mkdf-square {
+				line-height: 2;
+			}
+		}
+
+        .mkdf-iwt-initial-icon {
+            @include mkdfTransition(all $quick-transition $theme-easing);
+            opacity: 1;
+        }
+
+        .mkdf-iwt-hover-icon {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            @include mkdfTransition(all $quick-transition $theme-easing);
+
+        }
+	}
+
+    a:hover {
+        .mkdf-iwt-icon {
+            .mkdf-iwt-hover-icon {
+                opacity: 1;
+            }
+        }
+        .mkdf-iwt-title {
+            .mkdf-iwt-title-text {
+                color: $first-main-color;
+            }
+        }
+    }
+	
+	.mkdf-iwt-title {
+		margin: 0;
+		line-height: 1.2em;
+        .mkdf-iwt-title-text {
+            @include mkdfTransition(all $quick-transition $theme-easing);
+        }
+	}
+	
+	.mkdf-iwt-title-text {
+		display: block;
+	}
+	
+	.mkdf-iwt-text {
+		margin: 21px 0 0;
+	}
+	
+	&.mkdf-iwt-icon-left {
+		width: auto;
+		
+		.mkdf-iwt-icon,
+		.mkdf-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.mkdf-iwt-icon {
+			position: relative;
+			top: 1px;
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.mkdf-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+	
+	&.mkdf-iwt-icon-left-from-title {
+		
+		.mkdf-iwt-icon,
+		.mkdf-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.mkdf-iwt-icon {
+			
+			.mkdf-icon-element {
+				@include mkdfTransition(none);
+			}
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.mkdf-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+	
+	&.mkdf-iwt-icon-top {
+		text-align: center;
+		
+		.mkdf-iwt-content {
+			padding: 16px 0 0;
+		}
+
+        .mkdf-iwt-hover-icon {
+            width: 100%;
+            text-align: center;
+        }
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

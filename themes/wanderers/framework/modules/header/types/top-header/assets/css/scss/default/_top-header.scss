@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Top header style - begin
+   ========================================================================== */
+
+.mkdf-top-bar {
+	@include mkdfRelativeHolderLayout();
+	height: 38px;
+	color: #fff;
+	font-size: 10px;
+	line-height: 1;
+	background-color: #1c1c1c;
+	z-index: 111;
+	box-sizing: border-box;
+	
+	> .mkdf-vertical-align-containers {
+		padding: 0 40px;
+	}
+	
+	.mkdf-vertical-align-containers {
+		
+		.mkdf-position-left,
+		.mkdf-position-right {
+			
+			&:before {
+				display: none;
+			}
+		}
+		
+		.mkdf-position-left-inner,
+		.mkdf-position-right-inner {
+			display: -webkit-flex; /* Safari */
+			-webkit-align-items: center; /* Safari 7.0+ */
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+	}
+	
+	.mkdf-grid {
+		height: 100%;
+		
+		.mkdf-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+			
+			.mkdf-top-bar-in-grid-padding & {
+				padding: 0 40px;
+			}
+		}
+	}
+	
+	.widget {
+		margin: 0;
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        a {
+            color: #fff;
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+	}
+}
+/* ==========================================================================
+   Top header style - end
+   ========================================================================== */

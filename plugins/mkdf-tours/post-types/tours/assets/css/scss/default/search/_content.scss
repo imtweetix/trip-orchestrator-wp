@@ -1,0 +1,162 @@
+.mkdf-tours-search-page-holder{
+    margin-top: -57px;
+    position: relative;
+    z-index: 101;
+}
+
+.mkdf-tours-search-content {
+	@include mkdfRelativeHolderLayout();
+	margin-top: 100px;
+	
+	&.mkdf-tours-searching {
+		opacity: 0.2;
+	}
+
+	.mkdf-tours-search-item {
+
+		&.mkdf-tours-search-list-item {
+			margin-bottom: 60px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.mkdf-tours-item-with-smaller-spacing {
+	
+	&.mkdf-tours-search-item {
+		
+		.mkdf-tours-standard-item {
+			
+			.mkdf-tours-standard-item-content-inner {
+				padding: 21px 20px;
+				border: 1px solid #ebebeb;
+				border-top: none;
+				border-bottom: none;
+			}
+			
+			@media only screen and (min-width: 1025px) {
+				.mkdf-tours-standard-item-title-price-holder {
+					padding-right: 80px;
+				}
+			}
+			
+			.mkdf-tours-standard-item-title-price-holder .mkdf-tour-title,
+			.mkdf-tours-price-holder {
+				font-size: 15px;
+			}
+			
+			.mkdf-tours-price-with-discount {
+				
+				.mkdf-tours-item-price {
+					font-size: 12px;
+				}
+				
+				.mkdf-tours-item-discount-price {
+					font-size: 15px;
+				}
+			}
+			
+			.mkdf-tours-standard-item-excerpt {
+				@include mkdfRelativeHolderLayout();
+				margin: 10px 0 0;
+			}
+		}
+		
+		.mkdf-tours-gallery-item {
+			
+			.mkdf-tours-gallery-item-image {
+				border: 1px solid #ebebeb;
+				border-top: none;
+				box-sizing: border-box;
+			}
+			
+			.mkdf-tours-gallery-title-holder .mkdf-tour-title,
+			.mkdf-tours-price-holder {
+				font-size: 15px;
+			}
+			
+			.mkdf-tours-price-with-discount {
+				
+				.mkdf-tours-item-price {
+					font-size: 12px;
+				}
+				
+				.mkdf-tours-item-discount-price {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+.mkdf-tours-search-page-holder {
+
+	.mkdf-tours-search-pagination {
+		margin-top: 72px;
+		margin-bottom: 92px;
+        text-align: center;
+
+        ul {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+
+                a,
+                span {
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    margin: 0 8px;
+                    padding: 0;
+                    vertical-align: top;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    color: $default-heading-color;
+                    @include mkdfTransition(color .2s ease-out);
+                    font-weight: 400;
+
+                }
+
+                &.active {
+                    a,
+                    span {
+                        color: $first-main-color;
+                    }
+                }
+
+                a:hover {
+                    cursor: pointer;
+                    color: $first-main-color;
+                }
+
+                &.mkdf-pagination-next,
+                &.mkdf-pagination-prev {
+                    a {
+                        margin: 0;
+                        font-weight: 400;
+                        font-size: 22px;
+                        line-height: 1;
+                        top: 2px;
+                        > span {
+                            margin: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+
+	}
+}

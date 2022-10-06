@@ -1,0 +1,83 @@
+1.8
+- Added WordPress 5.7 compatibility
+- Added WooCommerce 5.3.0 compatibility
+- Updated Mikado Core to 1.3
+- Updated Mikado Membership plugin to 1.0.2
+- Updated Mikado Instagram Feed plugin to 2.0.1
+- Updated Mikado Tours plugin to 1.0.5
+- Updated Mikado Twitter Feed plugin to 1.1.2
+- Updated Revolution Slider plugin to 6.4.11
+- Updated WPBakery Page Builder plugin to 6.6.0
+- Fixed Revolution Slider preview functionality
+- Improved Countdown shortcode calculation
+- Improved PHP 8 compatibility
+
+1.7.1
+- Added images licensed for digital use on websites made with Wanderers theme
+- Added WooCommerce 4.9.1 compatibility
+- Updated Revolution Slider plugin to 6.3.6
+- Updated WPBakery Visual Composer plugin to 6.5.0
+
+1.7
+- Added WordPress 5.5 compatibility
+- Added WooCommerce 4.6.1 compatibility
+- Updated Mikado Instagram Feed plugin to 2.0
+- Updated Mikado Core to 1.2.1
+- Updated Mikado Tours plugin to 1.0.4
+- Updated Mikado Membership plugin to 1.0.1
+- Updated WPBakery Page Builder to 6.4.1
+- Updated Revolution Slider to 6.2.23
+
+1.6
+- Added Wanderers Dashboard
+- Added WooCommerce 3.8.1 compatibility
+- Updated Mikado Core to 1.2
+- Updated WPBakery Page Builder to 6.1
+- Updated Revolution Slider to 6.1.5
+- Updated Mikado Instagram Feed plugin to 1.1.1
+- Updated Mikado Twitter Feed plugin to 1.1.1
+- Improved Import
+- Improved Welcome Page
+- improved twitter share
+- Changed Mikado Options Position
+- Fixed permalink redirection
+- Fixed Open Graph description rendering for pages 
+- Removed unused file instagram-redirect.php from Mikado Instagram Widget plugin
+- Removed unused file twitter-redirect.php from Mikado Twitter Feed plugin
+
+1.5
+- Added WooCommerce 3.7.0 compatibility
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.1.2
+- Updated Mikado Tours plugin to 1.0.3
+- Fixed mobile menu dropdown
+- Fixed Parallax effect with zoom out on title area background image
+- Fixed scrolling while full screen menu is open
+- Fixed custom sidebar on Mikado Tour single pages
+- Fixed wp_enqueue_styles syntax error in functions.php
+
+1.4
+- Added WooCommerce 3.6.1 compatibility
+- Updated Instagram Feed to 1.1
+- Updated Twitter Feed to 1.1
+- Improved import functionality
+- Improved theme security
+
+1.3
+- Added WooCommerce 3.5.5 compatibility
+- Updated Mikado Core plugin to 1.1
+- Updated Mikado Tours plugin to 1.0.2
+- Updated Visual Composer to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated pot file
+- Improved framework files
+
+1.2
+- Added WooCommerce 3.4.5 compatibility
+- Added compatibility with Gutenberg plugin
+- Updated WPBakery Page Builder to 5.5.2
+- Updated Revolution Slider to 5.4.8
+
+1.1
+- Added compatibility with PHP 7.2
+- Updated Mikado tours plugin to 1.0.1

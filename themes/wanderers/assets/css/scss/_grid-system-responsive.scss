@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Grid System responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium {
+	
+	/*
+	* If you changed some value for space do the same thing in masonry-type, product-list-main-and-vc scss files
+	*/
+	$columns_space_label: ('huge' );
+	$columns_space_width: (25);
+	
+	@for $i from 0 to length($columns_space_label) {
+		.mkdf-#{nth($columns_space_label,$i+1)}-space {
+			$column_width: nth($columns_space_width,$i+1);
+			$column_width_margin: $column_width * 2;
+			
+			&.mkdf-disable-bottom-space {
+				margin-bottom: -#{$column_width_margin}px;
+			}
+			
+			.mkdf-outer-space {
+				margin: 0 -#{$column_width}px;
+				
+				.mkdf-item-space {
+					padding: 0 #{$column_width}px;
+					margin: 0 0 #{$column_width_margin}px;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.mkdf-two-columns-form-without-space,
+	.mkdf-two-columns-form-with-space {
+		.mkdf-column-left,
+		.mkdf-column-right {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			padding: 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Grid System responsive style - end
+   ========================================================================== */

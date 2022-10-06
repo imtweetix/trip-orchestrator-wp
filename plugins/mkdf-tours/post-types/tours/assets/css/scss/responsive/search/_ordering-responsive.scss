@@ -1,0 +1,64 @@
+@include ipad-landscape{
+    .mkdf-search-ordering-holder {
+
+        .mkdf-search-ordering-list {
+            li{
+                a{
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+	
+	.mkdf-search-ordering-holder {
+        margin-top: 60px;
+		
+		.mkdf-search-ordering-list {
+			padding: 0;
+			border-bottom: 1px solid #eaeaea;
+			
+			li {
+				float: none;
+				width: 100%;
+                display: block;
+				
+				&.mkdf-search-ordering-item-active {
+					
+					a {
+						margin: 0;
+						border-color: #eaeaea;
+					}
+				}
+				
+				a {
+					width: 100%;
+					padding: 15px 20px;
+					border-right: none;
+					border-top: 1px solid #eaeaea;
+					
+					&:before {
+						display: none;
+					}
+					
+					.mkdf-search-ordering-icon,
+					.mkdf-search-ordering-title {
+						display: inline-block;
+						vertical-align: middle;
+					}
+					
+					.mkdf-search-ordering-icon {
+						position: relative;
+						top: -1px;
+					}
+					
+					.mkdf-search-ordering-title {
+						margin: 0 0 0 4px;
+					}
+				}
+			}
+		}
+	}
+}

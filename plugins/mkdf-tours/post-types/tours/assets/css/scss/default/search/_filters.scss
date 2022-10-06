@@ -1,0 +1,233 @@
+
+/* #Tour type filters styles - start
+   ========================================================================== */
+.mkdf-tours-type-filter-item {
+	margin-bottom: 7px;
+
+    &:first-child{
+        margin-top: 34px;
+    }
+}
+
+/* #Tour type filters styles - end
+   ========================================================================== */
+
+/* #Main filters styles - start
+   ========================================================================== */
+.mkdf-tours-search-main-filters-holder {
+	
+	&.mkdf-boxed-widget {
+        padding: 30px 20px 35px;
+		
+		.mkdf-tours-input-with-icon {
+			padding: 0;
+
+            &.mkdf-tours-range-slider{
+                margin-bottom: 32px;
+            }
+
+            .mkdf-tours-input-icon{
+                font-size: 15px;
+                left: 13px;
+
+                &.mkdf-tours-location-icon{
+                    font-size: 18px;
+                }
+            }
+			
+			input[type=text],
+			input[type=number],
+			select {
+				padding-left: 43px;
+			}
+			
+			input[type=text].mkdf-tours-price-range-field {
+				padding: 13px 20px;
+                background-color: #fff;
+			}
+		}
+	}
+	
+	.mkdf-tours-input-with-icon {
+		padding: 0 20px;
+        margin-bottom: 10px;
+        border: 1px solid #ebebeb;
+		
+		input[type=text],
+		input[type=number],
+		select {
+			padding-left: 23px;
+		}
+		
+		input[type=text].mkdf-tours-price-range-field {
+			padding-left: 0;
+		}
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox] {
+		display: none;
+	}
+
+	label {
+		vertical-align: middle;
+		font-size: 16px;
+
+		-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none;   /* Chrome/Safari/Opera */
+		-khtml-user-select: none;    /* Konqueror */
+		-moz-user-select: none;      /* Firefox */
+		-ms-user-select: none;       /* IE/Edge */
+		user-select: none;
+
+		cursor: pointer;
+
+        span{
+            text-transform: capitalize;
+            position: relative;
+            top:1px;
+        }
+	}
+
+	label:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 6px;
+		font-family: ElegantIcons;
+		font-size: 13px;
+		text-align: center;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		background-color: #fff;
+		box-sizing: border-box;
+        border: 1px solid #ddd;
+    }
+
+	input[type=checkbox]:checked + label:before {
+		content: '\4e';
+		color: $first-main-color;
+		background-color: #fff;
+	}
+
+	.mkdf-tours-search-main-filters-title {
+		margin-bottom: 19px;
+		text-align: left;
+		
+		h4 {
+			margin: 0;
+		}
+	}
+
+
+	.mkdf-tours-range-input {
+		height: 3px;
+		border: none;
+		background-color: $first-main-color;
+        margin-bottom: 31px;
+        margin-top: 37px;
+		box-shadow: none;
+
+		.noUi-base,
+		.noUi-background {
+			background-color: #ddd;
+			box-shadow: none;
+		}
+
+		.noUi-connect {
+			background: #8b8b8b;
+			box-shadow: none;
+		}
+
+		.noUi-handle {
+			width: 14px;
+			height: 14px;
+			top: -6px;
+			left: -4px;
+			background: #8b8b8b;
+			border: none;
+			border-radius: 50%;
+			box-shadow: none;
+
+			&:after,
+			&:before {
+				content: none;
+			}
+
+			&:hover {
+				cursor: move;
+			}
+		}
+	}
+	
+	.mkdf-btn {
+		width: 100%;
+        padding: 15px 45px;
+		display: block;
+		margin-top: 52px;
+        background-color: $first-main-color;
+
+        &:hover{
+            background-color: #000;
+        }
+	}
+	
+	select option {
+		color: #000;
+	}
+}
+
+.typeahead {
+	background-color: #fff;
+}
+
+.typeahead:focus {
+	border: 2px solid #0097cf;
+}
+
+.tt-hint {
+	color: #999
+}
+
+.tt-menu {
+	width: 101%;
+	margin: 10px 0;
+	padding: 8px 0;
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+    border-top: none;
+
+	left: -1px !important;
+
+	font-size: 13px;
+}
+
+.twitter-typeahead {
+	width: 100%;
+}
+
+.tt-suggestion {
+	padding: 3px 15px;
+}
+
+.tt-suggestion:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color: $first-main-color;
+}
+
+.tt-suggestion.tt-cursor {
+	color: #fff;
+	background-color: $first-main-color;
+}
+
+.tt-suggestion p {
+	margin: 0;
+}
+
+/* #Main filters styles - end
+   ========================================================================== */

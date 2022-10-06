@@ -1,0 +1,93 @@
+/* Standard type styles
+========================================================================== */
+
+.mkdf-tours-standard-item {
+
+    .mkdf-tours-standard-item-image-holder {
+        position: relative;
+
+        > a {
+            height: 100%;
+            @include mkdfRelativeHolderLayout();
+            @include mkdfImageZoomHoverStyle();
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .mkdf-tours-standard-item-label-holder {
+
+            .mkdf-tour-item-label {
+                width: 100%;
+                bottom: 27px;
+                left: 24px;
+                display: block;
+            }
+        }
+    }
+
+    .mkdf-tours-standard-item-content-inner {
+        padding: 15px 0 23px;
+        box-sizing: border-box;
+    }
+
+    .mkdf-tours-standard-item-price-holder {
+        position: relative;
+
+        .mkdf-tours-price-holder {
+            font-weight: 400;
+            font-size: 20px;
+            color: #181818;
+        }
+
+        .mkdf-tours-item-price-additional-text {
+            font-weight: 400;
+            font-size: 16px;
+            color: #c2c2c2;
+            font-size: 15px;
+        }
+    }
+
+    .mkdf-tours-standard-item-title-price-holder {
+        position: relative;
+        margin-bottom: 9px;
+
+        .mkdf-tour-title {
+            margin: 0 0 4px;
+        }
+    }
+
+    .mkdf-tours-standard-item-rating {
+
+        .mkdf-tour-item-rating {
+            color: #999;
+            margin-bottom: 16px;
+        }
+    }
+
+    .mkdf-tours-standard-item-bottom-content {
+        color: #c2c2c2;
+        font-size: 15px;
+        margin-bottom: 26px;
+
+        .mkdf-tours-standard-item-bottom-item {
+            display: inline-block;
+            margin-right: 21px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .mkdf-tour-info-icon {
+        font-size: 14px;
+        margin: 0 3px 0 0;
+        color: $first-main-color;
+    }
+
+}
+
+/* Standard type styles end
+   ========================================================================== */

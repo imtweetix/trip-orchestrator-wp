@@ -1,0 +1,275 @@
+/* ==========================================================================
+   WooCommerce Product List page styles - begin
+   ========================================================================== */
+
+.mkdf-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells,
+.mkdf-content .woocommerce {
+    @include mkdfRelativeHolderLayout();
+}
+
+.mkdf-pl-main-holder {
+    margin: 0 0 13px;
+    
+    .mkdf-woo-pl-info-on-image-hover & {
+        margin: 0 0 50px;
+    }
+}
+
+ul.products {
+    list-style: none;
+	margin: 0 -15px;
+    clear: both;
+    
+    > .product {
+        position: relative;
+        display: inline-block;
+	    vertical-align: middle;
+	    float: left;
+	    margin: 0 0 30px;
+	    padding: 0 15px;
+	    box-sizing: border-box;
+        
+        .touch & {
+            cursor: pointer;
+        }
+
+        &:hover {
+
+            .mkdf-pl-inner .mkdf-pl-text {
+                opacity: 1;
+            }
+
+            .button,
+            .added_to_cart {
+                @include mkdfTransform(translateY(1px));
+            }
+        }
+        
+        .mkdf-product-list-title {
+            margin: 0 0 4px;
+            display: inline-block;
+            width: 50%;
+            text-align: left;
+        }
+        
+        .mkdf-pl-rating-holder {
+            @include mkdfRelativeHolderLayout();
+            width: 50%;
+            text-align: right;
+            line-height: 1;
+            margin: 0 0 4px;
+            display: inline-block;
+        }
+        
+        .price {
+            @include mkdfWooCommercePriceStyle();
+        }
+
+        .button,
+        .added_to_cart {
+            margin: 25px 0 0;
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            background-color: $first-main-color;
+            @include mkdfTransform(translateY(calc(100% + 1px)));
+            @include mkdfTransition(all $quick-transition $theme-easing);
+
+            &:hover{
+                background-color: #2e2e2e;
+            }
+
+            &:before{
+                content: "\f067";
+                font-size: 16px;
+                font-family: FontAwesome;
+                padding-right: 10px;
+                font-weight: 400;
+            }
+        }
+        
+        .button.added {
+            display: none;
+        }
+        
+        .mkdf-pl-inner {
+            @include mkdfRelativeHolderLayout();
+            overflow: hidden;
+            
+            .mkdf-pl-image {
+                @include mkdfRelativeHolderLayout();
+                overflow: hidden;
+                
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            
+            .mkdf-pl-text {
+                @include mkdfAbsoluteHolderLayout();
+                opacity: 0;
+                box-sizing: border-box;
+                @include mkdfTransition(opacity $quick-transition $theme-easing);
+            }
+            
+            .mkdf-pl-text-outer {
+                @include mkdfTableLayout();
+                text-align: center;
+            }
+            
+            .mkdf-pl-text-inner {
+                @include mkdfTableCellLayout();
+                vertical-align: bottom;
+                
+                .mkdf-product-list-title,
+                .price,
+                .star-rating {
+                    color: #fff;
+                }
+                
+                .price del {
+                    color: #c2c2c2;
+                }
+            }
+            
+            > a {
+                @include mkdfAbsoluteHolderLayout();
+            }
+        }
+        
+        .mkdf-pl-text-wrapper {
+            @include mkdfRelativeHolderLayout();
+            margin: 12px 0 57px;
+        }
+    }
+}
+
+$columns_space_label: ('no', 'tiny', 'small', 'normal', 'medium', 'large');
+$columns_space_width: (0, 5, 10, 15, 20, 25);
+
+@for $i from 0 to length($columns_space_label) {
+    &.mkdf-woo-#{nth($columns_space_label,$i+1)}-space {
+        $column_width: nth($columns_space_width,$i+1);
+        $column_width_margin: $column_width * 2;
+        
+        ul.products {
+            @if($column_width == 0) {
+                margin: 0;
+            } @else {
+                margin: 0 -#{$column_width}px;
+            }
+            
+            > .product {
+                padding: 0 #{$column_width}px;
+                margin: 0 0 #{$column_width_margin}px;
+            }
+        }
+    }
+}
+
+.mkdf-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells {
+    
+    $product_list_columns: ('columns-3', 'columns-4');
+    
+    @for $i from 0 to length($product_list_columns) {
+        $column_width: 100%/($i+3);
+        
+        > .products {
+            
+            > .product {
+                
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+                    
+                    .mkdf-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        width: $column_width;
+                        
+                        &:nth-child(#{$i+3}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce {
+    
+    &.columns-1 {
+        
+        > .products {
+            
+            > .product {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+    
+    $product_list_vc_columns: ('columns-2', 'columns-3', 'columns-4', 'columns-5', 'columns-6');
+    
+    @for $i from 0 to length($product_list_vc_columns) {
+        &.#{nth($product_list_vc_columns,$i+1)} {
+            $column_vc_width: 100%/($i+2);
+            
+            > .products {
+                
+                > .product {
+                    width: $column_vc_width;
+                    $product_list_vc_columns_label: #{nth($product_list_vc_columns,$i+1)};
+                    
+                    @if $product_list_vc_columns_label == 'columns-5' {
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+                            
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-6' {
+                        @media only screen and (min-width: $laptop-landscape-large-plus-pixel) {
+                            
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-3' {
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+                            
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-2' {
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+                            
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else {
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+                            
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Product List page styles - end
+   ========================================================================== */

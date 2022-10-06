@@ -1,0 +1,58 @@
+.mkdf-tours-destination-list {
+	font-size: 0; //to eliminate spacing between inline-blocks
+}
+
+.mkdf-tours-destination-item-holder {
+	@include mkdfRelativeHolderLayout();
+	
+	.touch & {
+		cursor: pointer;
+	}
+
+	&:hover {
+		
+		.mkdf-tours-destination-item-image {
+			img {
+				@include mkdfTransform(translateZ(0) scale(1.03));
+			}
+		}
+	}
+
+	.mkdf-tours-destination-item-content {
+		@include mkdfAbsoluteHolderLayout();
+		z-index: 2;
+	}
+
+	.mkdf-tours-destination-item-content-inner {
+		@include mkdfTableLayout();
+		text-align: left;
+
+        .mkdf-tours-destination-item-text{
+            @include mkdfTableCellLayout(bottom);
+            padding: 0 26px;
+
+            .mkdf-tours-destination-custom-label{
+                font-size: 60px;
+                font-family: 'Kristi';
+                color: $first-main-color;
+            }
+        }
+		
+		.mkdf-tours-destination-item-title {
+            margin: 6px 0 28px;
+			padding: 0 14px;
+			color: #fff;
+		}
+	}
+
+	.mkdf-tours-destination-item-image {
+		overflow: hidden;
+		z-index: 10;
+
+		img {
+			display: block;
+			@include mkdfTransitionTransform(.25s $theme-easing .05s);
+			@include mkdfTransform(translateZ(0) scale(1));
+		}
+	}
+}

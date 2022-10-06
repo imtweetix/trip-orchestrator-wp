@@ -1,0 +1,23 @@
+.mkdf-blog-holder {
+    article {
+        &.format-gallery {
+
+            @include phone-landscape {
+
+                .mkdf-blog-gallery.mkdf-owl-slider {
+                    .owl-nav {
+                        .owl-next,
+                        .owl-prev {
+                            width: 45px;
+                            height: 45px;
+                            line-height: 43px;
+                            > span {
+                                font-size: 26px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

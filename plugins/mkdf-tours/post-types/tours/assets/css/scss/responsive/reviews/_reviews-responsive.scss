@@ -1,0 +1,35 @@
+.mkdf-tour-item-single-holder {
+
+    @include ipad-portrait {
+
+        .mkdf-tour-item-section#tour-item-review-id .mkdf-tours-reviews-list-top .mkdf-item-reviews-display-wrapper .mkdf-reviews-average {
+            width: 40.6%;
+            padding-left: 30px;
+
+        }
+
+        .mkdf-comment-list .mkdf-rating-inner .mkdf-rating-value {
+            display: block;
+        }
+    }
+
+    @include phone-portrait {
+
+        .mkdf-tour-item-section#tour-item-review-id .mkdf-tours-reviews-list-top .mkdf-item-reviews-display-wrapper {
+            .mkdf-rating-percentage,
+            .mkdf-reviews-average {
+                width: 100%;
+                display: block;
+                padding: 0;
+            }
+        }
+
+        .mkdf-comment-list .mkdf-rating-inner {
+            width: 100%;
+        }
+
+        .mkdf-tour-item-section#tour-item-review-id .mkdf-comment-form-rating {
+            width: 100%;
+        }
+    }
+}

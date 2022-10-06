@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Sticky header style - begin
+   ========================================================================== */
+
+$sticky-header-height: 70px;
+
+.mkdf-sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $sticky-header-height;
+	width: 100%;
+    z-index: 100;
+	-webkit-backface-visibility: hidden;
+	@include mkdfTransform(translateY(-100%));
+	@include mkdfTransitionTransform(.6s ease);
+    
+    .mkdf-grid {
+        height: 100% !important; //override settings for other instances of this div
+    }
+
+    .mkdf-sticky-holder .mkdf-grid .mkdf-vertical-align-containers {
+        padding: 0;
+    }
+    
+    &.header-appear {
+        transform: translateY(0%);
+    }
+	
+	.admin-bar &.header-appear {
+		top: 32px;
+	}
+    
+    .mkdf-sticky-holder {
+	    position: relative;
+	    height: 100%;
+        z-index: 2;
+        background-color: #fff;
+        border-bottom: 1px solid $default-border-color;
+        box-sizing: border-box;
+	
+	    .mkdf-logo-wrapper a {
+		    max-height: $sticky-header-height;
+	    }
+	    
+	    .mkdf-vertical-align-containers {
+		    padding: 0 40px;
+	    }
+	    
+	    &.mkdf-menu-left {
+		
+		    .mkdf-main-menu {
+			    width: auto;
+			    padding: 0 0 0 20px;
+		    }
+		
+		    .mkdf-vertical-align-containers {
+			
+			    .mkdf-position-left-inner {
+				    height: 100%;
+			    }
+			
+			    .mkdf-position-right {
+				
+				    &:before {
+					    display: none;
+				    }
+			    }
+			
+			    .mkdf-position-right-inner {
+				    display: -webkit-flex; /* Safari */
+				    -webkit-align-items: center; /* Safari 7.0+ */
+				    display: flex;
+				    align-items: center;
+				    height: 100%;
+			    }
+		    }
+	    }
+	
+	    &.mkdf-menu-center {
+		
+		    .mkdf-vertical-align-containers {
+			
+			    .mkdf-position-center-inner {
+				    height: 100%;
+			    }
+			
+			    .mkdf-position-right {
+				
+				    &:before {
+					    display: none;
+				    }
+			    }
+			
+			    .mkdf-position-right-inner {
+				    display: -webkit-flex; /* Safari */
+				    -webkit-align-items: center; /* Safari 7.0+ */
+				    display: flex;
+				    align-items: center;
+				    height: 100%;
+			    }
+		    }
+	    }
+	
+	    &.mkdf-menu-right {
+		
+		    .mkdf-main-menu {
+			    width: auto;
+		    }
+		
+		    .mkdf-vertical-align-containers {
+			
+			    .mkdf-position-right-inner {
+				    height: 100%;
+			    }
+		    }
+	    }
+    }
+	
+	.widget {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+}
+/* ==========================================================================
+   Sticky header style - end
+   ========================================================================== */

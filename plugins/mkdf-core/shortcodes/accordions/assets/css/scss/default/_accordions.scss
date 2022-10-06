@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Accordions shortcode style - begin
+   ========================================================================== */
+
+.mkdf-accordion-holder {
+    @include mkdfRelativeHolderLayout();
+
+    .mkdf-accordion-title {
+        position: relative;
+        cursor: pointer;
+        margin: 0;
+        box-sizing: border-box;
+        @include mkdfTransform(translateZ(0px));
+        @include mkdfTransition(color .2s ease-out, background-color .2s ease-out);
+	
+	    .mkdf-tab-title {
+		    display: block;
+		    line-height: inherit;
+	    }
+
+        .mkdf-accordion-mark {
+            position: absolute;
+            top: 50%;
+	        right: 20px;
+            width: 20px;
+	        height: 18px;
+	        margin: -1px 0 0;
+	        font-size: 24px;
+	        line-height: 24px;
+            text-align: center;
+            @include mkdfTransform(translateY(-50%));
+	
+	        span {
+		        position: absolute;
+		        display: block;
+		        width: 100%;
+		        height: 100%;
+		        font-size: inherit;
+		        line-height: inherit;
+		        @include mkdfTransition(opacity .2s ease-out);
+		
+		        &:before {
+			        display: block;
+			        line-height: inherit;
+		        }
+		        
+		        &.mkdf_icon_minus {
+			        opacity: 0;
+		        }
+		        
+		        &.mkdf_icon_plus {
+			        opacity: 1;
+		        }
+	        }
+        }
+	    
+	    &.ui-state-active,
+	    &.ui-state-hover {
+		
+		    .mkdf-accordion-mark {
+			    
+			    span {
+					color: $first-main-color;
+				    
+				    &.mkdf_icon_minus {
+					    opacity: 1;
+				    }
+				    
+				    &.mkdf_icon_plus {
+					    opacity: 0;
+				    }
+			    }
+		    }
+	    }
+    }
+
+    .mkdf-accordion-content {
+        margin: 0;
+	    
+	    p {
+		    margin: 0;
+	    }
+    }
+	
+
+	
+	&.mkdf-ac-simple {
+		border-bottom: 1px solid #f2f2f2;
+		
+		.mkdf-accordion-title {
+			padding: 17px 50px 17px 0;
+			border-top: 1px solid #f2f2f2;
+
+			&.ui-state-active {
+				.mkdf-tab-title {
+					color: $first-main-color;
+				}
+			}
+		}
+
+		
+		.mkdf-accordion-content {
+			padding: 0 0 48px;
+		}
+	}
+}
+/* ==========================================================================
+   Accordions shortcode style - end
+   ========================================================================== */

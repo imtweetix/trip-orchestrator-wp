@@ -1,0 +1,28 @@
+@include phone-landscape {
+    .mkdf-tours-checkout-content-inner {
+        display: block;
+
+        .mkdf-tours-info-holder,
+        .mkdf-tours-image-holder {
+            display: block;
+            width: 100%;
+        }
+
+        .mkdf-tours-image-holder {
+            padding-right: 0;
+
+            img {
+                display: block;
+            }
+
+            .mkdf-tours-image-bckg {
+                background-image: none;
+            }
+        }
+
+        .mkdf-tours-info-holder {
+            padding-left: 0;
+            padding-top: 30px;
+        }
+    }
+}

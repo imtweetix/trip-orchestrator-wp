@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Video Button shortcode start styles
+   ========================================================================== */
+
+.mkdf-video-button-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	&.mkdf-vb-has-img {
+		
+		.mkdf-video-button-play,
+		.mkdf-video-button-play-image {
+			@include mkdfRelativeHolderLayout();
+			width:auto;
+			z-index: 1;
+			
+			.mkdf-video-button-play-inner {
+				position: relative;
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+
+    &.mkdf-dark-skin{
+        .mkdf-video-button-text-wrapper-inner{
+            .mkdf-vb-title,
+            .mkdf-vb-excerpt{
+                color: $default-heading-color;
+            }
+        }
+    }
+	
+	.mkdf-video-button-image {
+		@include mkdfRelativeHolderLayout();
+		
+		img {
+			display: block;
+		}
+
+	}
+	
+	.mkdf-video-button-play,
+	.mkdf-video-button-play-image {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		z-index: 1;
+	}
+
+    .mkdf-video-button-text-holder{
+        @include mkdfAbsoluteHolderLayout();
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .mkdf-video-button-text-wrapper{
+        @include mkdfTableLayout();
+    }
+
+    .mkdf-video-button-text-wrapper-inner{
+        @include mkdfTableCellLayout(bottom);
+
+        .mkdf-vb-subtitle{
+            line-height: 1em;
+            font-size: 50px;
+            font-family: 'Kristi';
+            color: $first-main-color;
+        }
+
+        .mkdf-vb-title{
+            color: #fff;
+            margin: 3px 0 0;
+        }
+
+        .mkdf-vb-excerpt{
+            margin: 10px 0 23px;
+            color: #fff;
+        }
+    }
+	
+	.mkdf-video-button-play {
+		color: $first-main-color;
+		font-size: 72px;
+		line-height: 1;
+		
+		span {
+			display: block;
+			line-height: inherit;
+			
+			&:before {
+				display: inline-block;
+				line-height: inherit;
+				@include mkdfTransitionTransform($quick-transition $theme-easing);
+			}
+		}
+
+		&:hover {
+			span { 
+				&:before { 
+					@include mkdfTransform(scale(1.05) translateZ(0));
+				}
+			}
+		}
+	}
+	
+	.mkdf-video-button-play-image {
+		
+		&.mkdf-vb-has-hover-image {
+			
+			&:hover {
+				
+				img {
+					
+					&:first-child {
+						opacity: 0;
+					}
+					
+					&:nth-child(2) {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			@include mkdfTransition(opacity .3s ease-in-out);
+			
+			&:first-child {
+				position: relative;
+				opacity: 1;
+			}
+			
+			&:nth-child(2) {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				opacity: 0;
+				@include mkdfTransform(translateX(-50%) translateZ(0));
+				
+				.rev_slider_wrapper & {
+					@include mkdfTransform(translateZ(0));
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Video Button shortcode end styles
+   ========================================================================== */

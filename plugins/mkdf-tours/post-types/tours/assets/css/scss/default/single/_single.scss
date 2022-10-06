@@ -1,0 +1,631 @@
+/* ==========================================================================
+# Tour single style - begin
+========================================================================== */
+.mkdf-tour-item-single-holder {
+    margin-top: -57px;
+    position: relative;
+    z-index: 101;
+	
+	.mkdf-tour-tabs.mkdf-horizontal {
+
+        .mkdf-tabs-nav {
+            padding: 0;
+            margin: 0;
+            display: table;
+            width: 100%;
+
+            li {
+                display: table-cell;
+                vertical-align: middle;
+
+                a {
+                    &.mkdf-active-item{
+                        color: $first-main-color;
+                        background-color: #fff;
+
+                        &:before {
+                            display: block;
+                        }
+                    }
+                }
+
+                &:first-child {
+
+                    a {
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+
+                    a {
+                        border-right: 0;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    margin: 0;
+                    padding: 15px 20px;
+                    width: auto;
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: $default-text-color;
+                    background-color: #f6f6f6;
+                    border: none;
+                    border-right: 1px solid #eaeaea;
+                    @include mkdfTransition(color .2s ease-in-out, background-color .2s ease-in-out, margin .2s ease-in-out, padding .2s ease-in-out);
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        display: none;
+                        bottom: 0;
+                        left: -1px;
+                        width: 1px;
+                        height: 100%;
+                        background-color: #fff;
+                        z-index: 1;
+                    }
+
+                    .mkdf-tour-nav-section-icon {
+                        display: inline-block;
+                        font-size: 18px;
+                        margin-right: 10px;
+                        line-height: 1em;
+                        font-weight: normal;
+                        color: $first-main-color;
+                        top: 2px;
+                        position: relative;
+                    }
+
+                    .mkdf-tour-nav-section-title {
+                        display: inline-block;
+                        line-height: 20px;
+                        letter-spacing: 0.025em;
+                        margin: 0;
+                        color: #303030;
+                    }
+
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+        }
+
+        .mkdf-tab-container {
+            top: 0;
+            padding: 72px 0 30px;
+            border-top: none;
+        }
+    }
+
+    .mkdf-grid-row-medium-gutter{
+        margin: 0 -15px;
+    }
+
+	article {
+		
+		.mkdf-tour-item-section {
+			
+			&:not(:first-child) {
+				display: none;
+			}
+
+            &#tour-item-info-id{
+                padding: 92px 20px 100px 0;
+            }
+		}
+
+        .mkdf-tour-item-title-holder{
+            margin: 0 0 12px;
+
+            .mkdf-tour-item-title {
+                display: inline-block;
+                margin: 0 22px 0 0;
+                float: left;
+            }
+
+            .mkdf-tour-item-price-holder {
+                display: inline-block;
+                float: right;
+                top: 6px;
+                position: relative;
+
+                .mkdf-tour-item-price {
+                    font-size: 30px;
+
+                    .mkdf-tours-price-holder{
+                        color: $default-heading-color;
+                    }
+                }
+
+                .mkdf-tour-item-price-text {
+                    color: #c2c2c2;
+                    &:before {
+                        content: '/';
+                        margin: 0 2px 0 0;
+                    }
+                }
+            }
+        }
+		
+		.mkdf-info-section-part {
+			
+			&.mkdf-tour-item-main-info {
+				margin: 53px 0 67px;
+			}
+			
+			&.mkdf-tour-item-content {
+				margin: 30px 0 40px;
+			}
+		}
+
+        .mkdf-reviews-list-info{
+            .mkdf-stars-wrapper {
+                padding: 0;
+
+                .mkdf-stars-items {
+                    color: $first-main-color;
+                    font-size: 18px;
+
+                    i{
+                        margin-right: 3px;
+                    }
+                }
+            }
+
+            .mkdf-reviews-summary{
+                color: #c2c2c2;
+                font-size: 15px;
+                position: relative;
+                bottom: 2px;
+                margin-left: 9px;
+
+                &:before{
+                    content: '(';
+                }
+                &:after{
+                    content: ')';
+                }
+            }
+        }
+		
+		.mkdf-tour-item-short-info {
+			@include mkdfRelativeHolderLayout();
+			line-height: 26px;
+            font-size: 15px;
+            clear: both;
+			box-sizing: border-box;
+			
+			.mkdf-tours-single-info-item,
+			.mkdf-tours-tour-categories-holder,
+			.mkdf-tours-tour-categories-item,
+            .mkdf-tour-destination-holder{
+				display: inline-block;
+				margin-right: 24px;
+                color: #c2c2c2;
+
+                a{
+                    color: #c2c2c2;
+
+                    &:hover{
+                        color: $first-main-color;
+                    }
+                }
+				
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			
+			.mkdf-tour-info-icon,
+			.mkdf-tour-cat-item-icon,
+            .mkdf-destination-icon{
+				font-size: 14px;
+				margin-right: 6px;
+				vertical-align: top;
+                display: inline-block;
+                color: $first-main-color;
+			}
+
+            .mkdf-tour-destination-holder{
+                .mkdf-destination-image{
+                    display: inline-block;
+                }
+            }
+			
+			.mkdf-tour-cat-item-custom-image {
+				vertical-align: top;
+				
+				img {
+					width: 20px;
+					vertical-align: top;
+				}
+			}
+			
+			.mkdf-tour-info-label,
+			.mkdf-tour-cat-item-text {
+				vertical-align: top;
+			}
+		}
+		
+		.mkdf-tour-main-info-holder {
+			list-style: none;
+			margin: 0;
+			
+			li {
+				display: inline-table;
+				width: 100%;
+				border-top: 1px solid #ebebeb;
+				padding: 18px 0 22px;
+				@include mkdfTransition(background-color 0.2s ease-out);
+				
+				&:last-child {
+					border-bottom: 1px solid #ebebeb;
+				}
+				
+				&:hover {
+					.mkdf-info{
+                        color: $first-main-color;
+                    }
+				}
+				
+				.mkdf-info {
+					display: table-cell;
+					vertical-align: middle;
+					width: 47%;
+					box-sizing: border-box;
+					@include mkdfTransition(color 0.2s ease-out);
+				}
+				
+				.mkdf-value {
+					display: table-cell;
+					vertical-align: middle;
+					
+					.mkdf-tour-main-info-attr {
+						width: 40%;
+						float: left;
+						margin: 2px 0;
+					}
+				}
+				
+				&.mkdf-tours-checked-attributes .mkdf-tour-main-info-attr:before {
+					position: relative;
+					top: 2px;
+					content: "\4e";
+					font-family: 'ElegantIcons';
+					color: $first-main-color;
+					margin-right: 5px;
+					font-size: 14px;
+				}
+				
+				&.mkdf-tours-unchecked-attributes .mkdf-tour-main-info-attr:before {
+					position: relative;
+					top: 2px;
+					content: "\4d";
+					font-family: 'ElegantIcons';
+					color: #000;
+					margin-right: 5px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.mkdf-tour-gallery {
+			margin: -15px;
+
+			.mkdf-tour-gallery-item {
+				position: relative;
+				float: left;
+				width: 33.33%;
+				padding: 15px;
+				box-sizing: border-box;
+
+				&:nth-child(3n+1) {
+					clear: both;
+				}
+				
+				a {
+					position: relative;
+					display: block;
+                    @include mkdfImageZoomHoverStyle();
+					
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	.mkdf-tour-gallery-item-holder {
+		
+		.mkdf-gallery-title {
+			margin: 0 0 21px;
+		}
+		
+		p.mkdf-tour-gallery-item-excerpt,
+		p.mkdf-tour-gallery-item-excerpt-field {
+			font-size: 18px;
+			margin: 0 0 52px;
+		}
+	}
+	
+	.mkdf-tour-item-section {
+
+        &#tour-item-plan-id{
+            padding-top: 65px;
+
+            .mkdf-tour-plan-title{
+                margin: 24px 0 41px;
+            }
+
+            .mkdf-route-top-holder {
+                display: table;
+                width: 100%;
+                margin-bottom: 6px;
+            }
+
+            .mkdf-route-id {
+                display: table-cell;
+                height: 55px;
+                width: 60px;
+                line-height: 46px;
+                font-size: 30px;
+                font-weight: 700;
+                color: #fff;
+                background-color: $first-main-color;
+                font-family: $default-heading-font;
+                text-align: center;
+            }
+
+            .mkdf-tour-item-plan-part-title {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 30px;
+                font-weight: 700;
+                color: $default-heading-color;
+            }
+        }
+
+        &#tour-item-location-id{
+            padding: 84px 30px 0 0;
+
+            .mkdf-location-part {
+                margin-bottom: 62px;
+
+                .mkdf-tour-location {
+                    margin: 7px 0 39px;
+                    text-transform: capitalize;
+                }
+
+                p.mkdf-location-excerpt {
+                    font-size: 18px;
+                    margin: 0 0 32px;
+                }
+
+                .mkdf-google-map {
+                    height: 500px;
+                }
+
+                .mkdf-location-addresses {
+                    margin: 0 0 54px;
+                }
+            }
+        }
+
+        &#tour-item-gallery-id{
+            padding: 100px 0 73px;
+        }
+
+        &#tour-item-review-id{
+            padding: 71px 31px 0 0;
+
+            .mkdf-tours-reviews-list-top{
+                .mkdf-tours-review-title{
+                    margin: 20px 0 28px;
+                }
+
+                .mkdf-tours-review-excerpt{
+                    margin: 20px 0 36px;
+                }
+
+                .mkdf-item-reviews-display-wrapper{
+                    .mkdf-reviews-wrapper-inner{
+                        @include mkdfTableLayout();
+                    }
+
+                    .mkdf-reviews-average,
+                    .mkdf-rating-percentage{
+                        @include mkdfTableCellLayout();
+                    }
+
+                    .mkdf-reviews-average{
+                        width: 24.6%;
+                        padding-left: 30px;
+
+                        .mkdf-item-reviews-average-wrapper{
+                            margin-top: 20px;
+                            display: inline-block;
+                            text-align: center;
+                        }
+
+                        .mkdf-item-reviews-rating-description{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .mkdf-comment-holder{
+
+                .mkdf-comments-title{
+                    display: none;
+                }
+                .mkdf-comments{
+                    .mkdf-comment-list{
+                        li{
+                            padding: 50px 0 40px;
+                            border-bottom: 1px solid #ebebeb;
+
+                            &:first-child{
+                                border-top: 1px solid #ebebeb;
+                            }
+
+                            .mkdf-comment-image{
+                                width: 93px;
+                                height: 93px;
+                            }
+
+                            .mkdf-text-holder{
+                                clear: both;
+
+                                .mkdf-review-title{
+                                    h6{
+                                        margin: 0;
+                                    }
+                                }
+
+                                .mkdf-review-date{
+                                    margin: 30px 0 19px;
+                                    font-size: 15px;
+                                    color: #c2c2c2;
+                                }
+
+                                p{
+                                    margin: 7px 0 22px;
+                                }
+                            }
+
+                            .mkdf-rating-label{
+                                margin-right: 9px;
+                                font-size: 15px;
+                                line-height: 1.667em;
+                                color: $default-heading-color;
+                                font-weight: 700;
+                                font-family: $default-text-font;
+                            }
+                        }
+                    }
+                }
+            }
+	        .mkdf-comment-form {
+		        .comment-reply-title{
+			        margin: 0 0 32px;
+		        }
+	        }
+            .mkdf-comment-form-rating{
+                display: inline-block;
+                width: 33%;
+
+                label{
+                    margin-right: 9px;
+                    font-size: 15px;
+                    line-height: 1.667em;
+                    color: $default-heading-color;
+                    font-weight: 700;
+                    font-family: $default-text-font;
+                }
+                .mkdf-comment-rating-box{
+                    margin-left: 0;
+                }
+            }
+
+            #comment{
+                margin-top: 46px;
+            }
+        }
+		
+		.mkdf-info-section-part.mkdf-tour-item-plan-part {
+			position: relative;
+            
+            @media only screen and (min-width: 1280px) {
+                padding-right: 70px;
+            }
+		}
+
+		.mkdf-tour-item-plan-part-description{
+			padding-left: 90px; //50 of id width and 30 for padding;
+			padding-bottom: 30px;
+		}
+	}
+
+    .mkdf-tour-masonry-gallery-holder {
+        @include mkdfRelativeHolderLayout();
+
+        .mkdf-tour-masonry-gallery {
+            margin: 0 -13px;
+        }
+
+        .mkdf-tour-grid-gutter {
+            width: 0;
+        }
+
+        .mkdf-tour-grid-sizer {
+            width: 33.33333333333333%;
+        }
+
+        .mkdf-tour-gallery-item {
+            @include mkdfRelativeHolderLayout();
+            float: left;
+            width: 33.33333333333333%;
+            padding: 0 13px;
+            margin: 0 0 26px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &.mkdf-large-masonry-item,
+            &.mkdf-tgi-masonry-large-width,
+            &.mkdf-tgi-masonry-large-width-height{
+                width: 66.66666666666667%;
+            }
+
+            &.mkdf-tgi-masonry-large-height{
+                .mkdf-tour-gallery-item-inner,
+                .mkdf-tour-gallery-item-inner a{
+                    height: 100%;
+                }
+
+                img{
+                    height: 100%;
+                    width: auto;
+                    max-width: initial;
+                }
+            }
+
+            .mkdf-tour-gallery-item-inner {
+                @include mkdfRelativeHolderLayout();
+                height: 100%;
+                overflow: hidden;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                @include mkdfImageZoomHoverStyle();
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.mkdf-tour-item-section div.mkdf-tour-item-plan-part:last-child .mkdf-line-between-icons {
+	display: none;
+}
+
+/* ==========================================================================
+# Tour single style - end
+========================================================================== */

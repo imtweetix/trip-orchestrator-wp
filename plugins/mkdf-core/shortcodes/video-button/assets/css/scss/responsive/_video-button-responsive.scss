@@ -1,0 +1,21 @@
+@include phone-portrait {
+    .mkdf-video-button-holder {
+        .mkdf-video-button-text-holder {
+            padding: 20px;
+        }
+
+        .mkdf-video-button-text-wrapper-inner {
+            .mkdf-vb-title {
+                font-size: 20px;
+            }
+
+            .mkdf-vb-excerpt {
+                margin: 5px 0 12px;
+            }
+        }
+
+        .mkdf-video-button-play {
+            font-size: 46px;
+        }
+    }
+}

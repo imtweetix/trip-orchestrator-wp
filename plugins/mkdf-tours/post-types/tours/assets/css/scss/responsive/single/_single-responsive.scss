@@ -1,0 +1,61 @@
+
+
+.mkdf-tour-item-single-holder {
+
+    @include ipad-portrait {
+
+        margin-top: 0px;
+
+        article .mkdf-tour-main-info-holder li {
+            .mkdf-info,
+            .mkdf-value {
+                display: block;
+                width: 100%;
+            }
+
+            .mkdf-value .mkdf-tour-main-info-attr {
+                width: 100%;
+            }
+
+        }
+
+        .mkdf-tour-tabs.mkdf-horizontal {
+            margin-top: 60px;
+
+            .mkdf-tabs-nav li {
+                display: block;
+
+                a {
+                    border-right: none !important;
+                    border-top: 1px solid #eaeaea;
+                }
+            }
+        }
+
+        article .mkdf-tour-item-section#tour-item-info-id {
+            padding: 50px 0;
+        }
+
+        article .mkdf-tour-item-title-holder .mkdf-tour-item-price-holder {
+            float: left;
+        }
+
+        .mkdf-tour-masonry-gallery-holder .mkdf-tour-grid-sizer {
+            width: 100%;
+        }
+
+        .mkdf-tour-masonry-gallery-holder .mkdf-tour-gallery-item {
+            width: 100% !important;
+
+            .mkdf-tour-gallery-item-inner a {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .mkdf-tour-item-section#tour-item-location-id {
+            padding: 84px 0 0 0;
+
+        }
+    }
+}

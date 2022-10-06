@@ -1,0 +1,781 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.mkdf-comment-holder {
+    @include mkdfRelativeHolderLayout();
+    padding: 0;
+    box-sizing: border-box;
+
+    .mkdf-comment-holder-inner {
+        padding: 76px 0 20px;
+    }
+	
+	.mkdf-comment {
+		
+		&.mkdf-pingback-comment {
+			
+			.mkdf-comment-text {
+				padding: 0;
+			}
+		}
+	}
+
+    .mkdf-comment-list {
+        list-style: none;
+        position: relative;
+        z-index: 150;
+        padding: 0;
+        margin: 0;
+
+        li {
+            @include mkdfRelativeHolderLayout();
+
+            &:not(:last-child){
+                border-bottom: 1px solid #f2f2f2;
+            }
+
+            .mkdf-comment{
+                padding: 27px 0 23px;
+            }
+        }
+
+        > li:first-child {
+            margin: 0;
+        }
+
+        .children {
+            border-top: 1px solid #f2f2f2;
+            padding: 0 0 0 81px;
+
+            &:not(:last-child){
+                border-bottom: 1px solid #f2f2f2;
+            }
+        }
+    }
+
+    .mkdf-comments-title {
+        margin-bottom: 25px;
+
+        > * {
+            margin: 0;
+        }
+    }
+
+    .mkdf-comment-image {
+        position: relative;
+        display: block;
+        left: 0;
+        width: 82px;
+        height: 82px;
+        float: left;
+
+        img {
+            display: block;
+            border-radius: 4em;
+        }
+    }
+
+    .mkdf-comment-text {
+        padding: 0 0 0 111px;
+        min-height: 82px;
+
+        .mkdf-comment-info {
+            @include mkdfRelativeHolderLayout();
+            margin: 0 0 4px;
+        }
+
+        .replay,
+        .comment-reply-link,
+        .comment-edit-link {
+            float: left;
+            margin-right: 10px;
+            font-size: 15px;
+            color: #c2c2c2;
+            text-transform: capitalize;
+            padding: 11px 0 0;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+
+        .comment-edit-link{
+            padding-top: 13px;
+        }
+
+		.comment-reply-link {
+			&:before {
+				font-family: ElegantIcons;
+				content: "\e05a";
+				display: inline-block;
+				color: $first-main-color;
+				margin-right: 9px;
+			}
+		}
+
+        .mkdf-comment-name {
+            float: left;
+            color: #303030;
+            margin: -5px 18px 0 0;
+            font-weight: 700;
+        }
+
+        .mkdf-comment-date {
+            float: left;
+            margin: -1px 0 0;
+            font-size: 15px;
+            color: #c2c2c2;
+
+
+        }
+
+        .mkdf-text-holder p {
+            margin: 7px 0;
+        }
+
+        .comment-respond {
+            margin: 20px 0;
+
+            .comment-reply-title {
+                margin: 0 0 10px;
+                font-size: 14px;
+            }
+
+            .logged-in-as {
+                margin: 0 0 8px;
+            }
+        }
+
+        #cancel-comment-reply-link {
+            margin-left: 10px;
+            font-size: 12px;
+            color: $first-main-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+	
+	    ul, ol {
+		    
+		    li {
+			    display: list-item;
+		    }
+	    }
+
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+        }
+    }
+}
+
+.mkdf-comment-form {
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+    
+    .mkdf-comment-form-inner {
+        padding: 52px 0 100px;
+    }
+    
+    .comment-reply-title {
+        margin: 0 0 18px;
+		line-height: 1.6em;
+		font-weight: 700;
+		color: $default-heading-color;
+		font-family: $default-heading-font;
+    }
+    
+    .logged-in-as {
+        margin: 0 0 8px;
+    }
+}
+
+.wpb_column.mkdf-col-animated-bg {
+    .vc_column-inner {
+        background-position:-100px 0px !important;
+        @include mkdfTransition(all $quick-transition $theme-easing);
+    }
+
+    &:hover {
+        .vc_column-inner {
+            background-position:-120px 0px !important;
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .mkdf-comment-holder {
+	    
+        .mkdf-comment-list {
+	        
+            .children {
+                padding: 0 0 0 40px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+	
+    .mkdf-comment-holder {
+	    
+        .mkdf-comment-list {
+	        
+            .children {
+                padding: 0;
+            }
+        }
+
+        .mkdf-comment-text {
+	        
+            .mkdf-comment-date,
+            .mkdf-comment-name {
+                float: none;
+            }
+	        
+            .replay,
+            .comment-reply-link,
+            .comment-edit-link {
+                float: none;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+	
+    .mkdf-comment-holder {
+
+        .mkdf-comment-image {
+            float: none;
+        }
+
+        .mkdf-comment-text {
+            padding: 20px 0 0;
+            min-height: inherit;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+#respond textarea,
+.mkdf-style-form textarea,
+#respond input[type='text'],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+.post-password-form input[type='password'] {
+	@extend %input-style;
+}
+
+#respond textarea,
+#respond input[type='text']{
+    background-color: #f9f9f9;
+    border-color: #f9f9f9;
+    color: #999999;
+}
+
+.post-password-form input[type='password'] {
+	margin-top: 10px;
+}
+
+.wpcf7-form-control {
+	&.wpcf7-text,
+	&.wpcf7-number,
+	&.wpcf7-date,
+	&.wpcf7-textarea,
+	&.wpcf7-select,
+	&.wpcf7-quiz {
+		@extend %input-style;
+        background-color: #fff;
+		
+		footer & {
+			margin: 0;
+		}
+	}
+}
+
+#submit_comment,
+.post-password-form input[type='submit'],
+input.wpcf7-form-control.wpcf7-submit {
+	@include mkdfButtonDefaultStyle();
+	@include mkdfButtonMediumParams();
+	@include mkdfButtonSolidColor();
+	cursor: pointer;
+	
+	&:hover {
+		@include mkdfButtonSolidHoverColor();
+	}
+}
+
+#submit_comment{
+    background-color: $first-main-color;
+
+    &:hover{
+        background-color: #000;
+    }
+}
+
+p.form-submit,
+.wpcf7-form p {
+	margin: 0;
+}
+
+#respond textarea,
+.mkdf-style-form textarea,
+.wpcf7-form textarea {
+	display: block;
+	padding: 16px 18px;
+    resize: none;
+}
+
+.mkdf-two-columns-form-without-space {
+	
+	.wpcf7-form .ajax-loader {
+		display: none;
+	}
+}
+@include phone-portrait {
+
+    input.wpcf7-form-control.wpcf7-submit {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+div.wpcf7 .ajax-loader {
+    position: absolute;
+}
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Custom Comment Forms styles - start
+   ========================================================================== */
+
+.mkdf-subsribe{
+
+    input[type='email']{
+        width: calc(100% - 200px);
+        display: inline-block;
+        float: left;
+    }
+
+    input[type='submit']{
+        @include mkdfButtonSolidColor(true);
+        padding: 12px 51px;
+        display: inline-block;
+        float: left;
+    }
+
+    .ajax-loader{
+        display: none!important;
+    }
+}
+
+.mkdf-contact-us{
+    input[type='text'],
+    input[type='email'],
+    .wpcf7-form-control-wrap textarea{
+        background-color: #f9f9f9;
+        color: #808285;
+        border: 0;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+
+    .ajax-loader{
+        display: none!important;
+    }
+
+    input[type="submit"]{
+        margin-top: 17px;
+    }
+}
+
+/* ==========================================================================
+   #Custom Comment Forms styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Global Owl Slider - begin
+   ========================================================================== */
+.mkdf-owl-slider {
+	visibility: hidden;
+	
+    .owl-stage-outer {
+        z-index: 1;
+    }
+	
+	&.mkdf-slider-is-moving {
+		
+		.owl-item {
+			
+			.mkdf-block-drag-link {
+				z-index: -1 !important;
+			}
+		}
+	}
+    
+    &.mkdf-slider-has-both-nav {
+        
+        .owl-nav {
+            
+            .owl-prev,
+            .owl-next {
+                $pos: calc(-50% - 21px); // 21 is is half height of pagination control + top margin
+                @include mkdfTransform(translateY($pos));
+            }
+        }
+    }
+	
+	.owl-nav {
+		
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			z-index: 3;
+			color: $default-heading-color;
+			@include mkdfTransform(translateY(-50%));
+			@include mkdfTransition(color $quick-transition $theme-easing);
+			
+			&:hover {
+				color: $first-main-color;
+			}
+			
+			> span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 46px;
+				line-height: 1;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+		
+		.owl-prev {
+			left: 30px;
+		}
+		
+		.owl-next {
+			right: 30px;
+		}
+	}
+	
+	.owl-dots {
+		text-align: center;
+		margin: 55px 0 0;
+		
+		.owl-dot {
+			display: inline-block;
+			vertical-align: middle;
+			
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				width: 8px;
+				height: 8px;
+				margin: 0 3px;
+				border-radius: 50%;
+				background-color: #b7b7b7;
+				border: #b7b7b7;
+				box-sizing: border-box;
+				@include mkdfTransition(background-color $quick-transition $theme-easing, border $quick-transition $theme-easing);
+			}
+			
+			&:hover,
+			&.active {
+				
+				span {
+					background-color: $first-main-color;
+					border-color: $first-main-color;
+				}
+			}
+		}
+	}
+	
+	.owl-carousel .owl-item img {
+		-webkit-transform: translateZ(0); //chrome text cut off fix
+	}
+
+
+    + .mkdf-slider-thumbnail {
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+        margin: 20px -10px 0;
+
+        > .mkdf-slider-thumbnail-item {
+            float: left;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            line-height: 0;
+            img {
+                border: 2px solid transparent;
+                @include mkdfTransition(border-color $quick-transition $theme-easing);
+            }
+
+            &.active {
+                img {
+                    border: 2px solid $first-main-color;
+                }
+            }
+        }
+
+        $thumbnail_columns_number: ('two', 'three', 'four', 'five', 'six');
+
+        @for $i from 0 to length($thumbnail_columns_number) {
+            &.mkdf-slider-columns-#{nth($thumbnail_columns_number,$i+1)} {
+
+                .mkdf-slider-thumbnail-item {
+                    width: 100% / ($i+2);
+
+                    @include ipad-landscape {
+                        width: 33.3333%;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}
+/* ==========================================================================
+   #Global Owl Slider - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.error404 {
+
+    .mkdf-wrapper {
+        padding: 0 !important;
+    }
+    
+    .mkdf-content {
+        height: 100vh;
+        @include ipad-landscape {
+            min-height: 100vh;
+            margin-top: -70px !important;
+        }
+    }
+	
+	&.admin-bar {
+		
+		.mkdf-content {
+			height: calc(100vh - 32px);
+		}
+	}
+
+    .mkdf-content-inner {
+	    @include mkdfTableLayout();
+    }
+
+    .mkdf-page-not-found {
+	    @include mkdfTableCellLayout();
+        padding: 0 20%;
+	    text-align: center;
+
+        .mkdf-404-title {
+            margin: 0;
+        }
+	
+	    .mkdf-404-subtitle {
+            margin: 15px 0 0;
+        }
+	    
+	    .mkdf-404-text {
+		    margin: 10px 0 0;
+	    }
+
+        .searchform {
+            display: block;
+            margin: 61px auto 0;
+            max-width: 368px;
+
+            input,
+            button {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0;
+                margin: 0;
+                float: left;
+                height: 54px;
+                font-family: inherit;
+                font-weight: inherit;
+                line-height: 52px;
+                border-radius: 0;
+                outline: 0;
+                -webkit-appearance: none;
+                box-sizing: border-box;
+            }
+
+            input {
+                width: calc(100% - 52px);
+                font-size: 16px;
+                padding: 0 10px 0 22px;
+                background-color: #fff;
+                border: 1px solid #fff;
+                color: $default-text-color;
+                border-right: 0;
+
+                @include mkdfPlaceholder {
+                    color: inherit;
+                }
+            }
+
+            button {
+                width: 52px;
+                font-size: 22px;
+                color: #fff;
+                background-color: $first-main-color;
+                border: 0;
+                text-align: center;
+                cursor: pointer;
+                @include mkdfTransition(color .3s cubic-bezier(0.48, 0.19, 0.2, 0.86), background-color .3s cubic-bezier(0.48, 0.19, 0.2, 0.86));
+
+                &:hover {
+                    background-color: $default-heading-color;
+                }
+
+                span {
+                    display: block;
+                    line-height: inherit;
+
+                    &:before {
+                        display: block;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait {
+
+        .mkdf-page-not-found {
+            padding: 70px 30px 20px;
+        }
+    }
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#mkdf-back-to-top {
+    position: fixed;
+    width: 41px;
+    right: 25px;
+    bottom: 25px;
+    margin: 0;
+    z-index: 10000;
+    opacity: 0;
+    overflow:hidden;
+    visibility: hidden;
+
+    &.off {
+        opacity: 0;
+        visibility: hidden;
+        @include mkdfTransition(opacity 0.15s ease, visibility .0s .15s);
+    }
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+        background-color: $default-heading-color;
+        @include mkdfTransition(opacity 0.3s ease);
+    }
+
+    > span {
+        position: relative;
+        display: block;
+        width: 39px;
+        height: 39px;
+        line-height: 38px;;
+        font-family: $default-heading-font;
+        font-weight: 700;
+        font-size: 15px;
+        text-align: center;
+        color: #fff;
+        background-color: $first-main-color;
+        border: 1px solid $first-main-color;
+        overflow: hidden;
+        @include mkdfTransition(all $quick-transition $theme-easing);
+
+        &.mkdf-btt-text {
+            position:absolute;
+            top:100%;
+            left:0;
+            opacity:0;
+            background-color: $default-heading-color;
+            border: 1px solid $default-heading-color;
+            font-size: .9em;
+            text-transform: none;
+            @include mkdfTransition(opacity $quick-transition $theme-easing);
+        }
+    }
+
+    &:hover {
+        > span { 
+            opacity:1;
+            @include mkdfTransform(translate3d(0,-100%,0));
+            @include mkdfTransitionTransform(.45s cubic-bezier(.22,.82,.11,1.33));
+        }
+    }
+
+    span span {
+        display: block;
+        line-height: inherit;
+    }
+}
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - begin
+   ========================================================================== */
+.mkdf-self-hosted-video-holder {
+	
+    .mkdf-video-wrap {
+	
+	    .mejs-poster,
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */

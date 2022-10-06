@@ -1,0 +1,91 @@
+.mkdf-top-reviews-carousel-holder {
+	@include mkdfRelativeHolderLayout();
+
+	.mkdf-top-reviews-carousel-inner {
+		@include mkdfRelativeHolderLayout();
+        padding: 24px 14%;
+		box-sizing: border-box;
+        text-align: center;
+	}
+	
+	.mkdf-top-reviews-carousel-title {
+		margin: 0 0 21px;
+	}
+	
+	.mkdf-top-reviews-carousel {
+		@include mkdfRelativeHolderLayout();
+		visibility: hidden;
+	}
+	
+	.mkdf-top-reviews-carousel-item {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	.mkdf-top-reviews-item-title {
+		margin: 0 0 7px;
+	}
+	
+	.mkdf-tour-reviews-criteria-holder {
+		display: block;
+		width: 100%;
+		float: none;
+		margin: 0;
+        color: $first-main-color;
+        font-size: 18px;
+
+        .mkdf-tour-reviews-star{
+            margin: 0 1px;
+        }
+	}
+	
+	.mkdf-top-reviews-item-content {
+		margin: 25px 0 0;
+		
+		p {
+			margin: 0;
+		}
+	}
+	
+	.mkdf-top-reviews-item-author-info {
+		@include mkdfRelativeHolderLayout();
+		margin: 27px 0 0;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-top-reviews-item-author-avatar {
+		position: relative;
+		display: block;
+		vertical-align: middle;
+
+		img {
+			display: block;
+            margin: 0 auto;
+			border-radius: 50%;
+            width: 55px;
+		}
+	}
+	
+	.mkdf-top-reviews-item-author-name {
+		position: relative;
+		display: block;
+		vertical-align: middle;
+        margin: 0 0 11px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $default-heading-color;
+	}
+
+	.owl-dots {
+        margin: 7px 0 0;
+	}
+
+    &.mkdf-light-skin{
+        .mkdf-top-reviews-carousel-title,
+        .mkdf-top-reviews-item-title,
+        .mkdf-top-reviews-item-author-name,
+        .mkdf-top-reviews-item-content{
+            color: #fff;
+        }
+    }
+}

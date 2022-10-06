@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Blog Single style - begin
+   ========================================================================== */
+
+.mkdf-blog-holder.mkdf-blog-single {
+    margin: 0 0 20px;
+	
+	article {
+		margin: 0 0 30px;
+		.mkdf-post-title {
+			margin-bottom: 17px;
+		}
+		
+		.mkdf-post-heading {
+			margin-bottom: 49px;
+		}
+		
+		.mkdf-post-text {
+			padding: 0 0 29px;
+		}
+
+		.mkdf-post-info-bottom {
+			border-top: 0;
+			padding-top: 47px;
+			.mkdf-post-info-bottom-left{
+				> div {
+					display: inline-block;
+					a {
+						color: #c2c2c2;
+						font-size: 15px;
+
+                        &:hover{
+                            color: $first-main-color;
+                        }
+					}
+                    i {
+                        color: #c2c2c2;
+                    }
+				}
+			}
+		}
+
+        &.format-quote {
+
+            &.mkdf-post-light-skin{
+                .mkdf-post-text {
+                    .mkdf-quote-author,
+                    .mkdf-post-title{
+                        color: #fff;
+                    }
+                }
+            }
+
+            .mkdf-post-content {
+                margin-bottom: 44px;
+            }
+
+            .mkdf-post-text {
+                padding: 62px 79px;
+                background-color: #fbfbfb;
+                background-size: cover;
+
+                .mkdf-post-title {
+                    margin-bottom: 0;
+                }
+
+                .mkdf-quote-author{
+                    margin: 8px 0 0;
+                    font-weight: 700;
+                    color: $default-heading-color;
+                    text-transform: uppercase;
+                }
+            }
+
+            .mkdf-post-text-main {
+                @include mkdfTableLayout();
+                text-align: left;
+                position: static;
+            }
+
+            .mkdf-post-mark {
+                position: absolute;
+                right: -38px;
+                display: block;
+                top: 90px;
+                overflow: hidden;
+
+                .mkdf-quote-mark {
+                    font-family: Kristi;
+                    font-weight: 400;
+                    line-height: 148px;
+                    overflow: hidden;
+                    font-size: 300px;
+                    display: block;
+                }
+            }
+
+            .mkdf-post-link-holder {
+                @include mkdfTableCellLayout();
+                vertical-align: top;
+                text-align: left;
+            }
+
+            .mkdf-post-author {
+                display: inline-block;
+                margin-bottom: 23px;
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            & + .mkdf-author-description {
+                margin-top: 30px;
+            }
+        }
+
+        //Link post style
+        &.format-link {
+
+            .mkdf-post-content {
+                margin-bottom: 44px;
+            }
+
+            &.mkdf-post-light-skin{
+                .mkdf-post-text{
+                    .mkdf-post-text-inner{
+                        .mkdf-post-title{
+                            color: #fff;
+                        }
+                    }
+                }
+                .mkdf-post-info-bottom{
+                    .mkdf-post-info-bottom-left{
+                        > div {
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mkdf-post-text{
+                padding: 62px 79px;
+                background-color: #fbfbfb;
+                background-size: cover;
+
+                .mkdf-post-info-bottom-left {
+                    width: 100%;
+                }
+
+                .mkdf-post-title {
+                    margin-bottom: 0;
+                }
+            }
+
+            .mkdf-post-text-main {
+                @include mkdfTableLayout();
+                text-align: left;
+            }
+
+            .mkdf-post-mark {
+                @include mkdfTableCellLayout();
+                width: 50px;
+                vertical-align: top;
+                text-align: left;
+
+                .mkdf-link-mark {
+                    padding-top: 5px;
+                    font-size: 36px;
+                    color: $first-main-color;
+                }
+            }
+
+            .mkdf-post-link-holder {
+                @include mkdfTableCellLayout();
+                vertical-align: top;
+                text-align: left;
+            }
+
+            .mkdf-post-content .mkdf-post-info-bottom{
+                padding: 6px 0 0;
+            }
+
+            & + .mkdf-author-description {
+                margin-top: 30px;
+            }
+        }
+
+        &.format-gallery {
+
+
+        }
+	}
+}
+/* ==========================================================================
+   Blog Single style - end
+   ========================================================================== */

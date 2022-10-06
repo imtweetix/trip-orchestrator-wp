@@ -1,0 +1,337 @@
+/* ==========================================================================
+   Default WordPress widgets styles - begin
+   ========================================================================== */
+
+.widget {
+    margin: 0 0 $widget-bottom-margin;
+    padding: 0;
+
+    .mkdf-widget-title-holder {
+        margin-bottom: $widget-list-item-margin;
+
+        .mkdf-widget-title {
+            color: $widget-heading-color;
+            margin-bottom: 3px;
+        }
+
+        .mkdf-separator {
+            border-color: $widget-text-color;
+            border-bottom-width: 3px;
+            width: 30px;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: block;
+            line-height: $widget-list-item-height;
+            margin: 0;
+            padding: $widget-list-item-padding 0;
+            color: $widget-link-color;
+
+            &:first-child {
+                padding-top: 7px;
+            }
+
+            &:last-child {
+                border: 0;
+                padding-bottom: 0;
+            }
+
+            a {
+                color: $widget-link-color;
+
+                &:hover {
+                    color: $widget-link-hover-color;
+                }
+            }
+        }
+
+        .children,
+        .sub-menu {
+            border-top: 1px solid $widget-list-item-border-color;
+            margin-top: $widget-list-item-margin;
+        }
+    }
+
+    // widgets with lists and animation on link hover
+    &.widget_pages,
+    &.widget_archive,
+    &.widget_categories,
+    &.widget_meta,
+    &.widget_recent_entries,
+    &.widget_nav_menu {
+
+        .mkdf-widget-title {
+            margin-bottom: 0;
+        }
+
+        ul {
+
+            li {
+                overflow: hidden;
+
+                a {
+                    display: inline;
+                    overflow: hidden;
+                    padding: 0;
+                    position: relative;
+                    @include mkdfTransition(color $quick-transition $theme-easing);
+                }
+            }
+        }
+    }
+
+    // widgets with lists and w/o animation on link hover
+    &.widget_recent_comments,
+    &.widget_rss {
+
+        .mkdf-widget-title {
+            margin-bottom: 0;
+        }
+    }
+
+    // calendar
+    #wp-calendar {
+        text-align: center;
+        width: 100%;
+
+        caption {
+            margin: 0 0 $widget-list-item-margin;
+
+        }
+
+        th, td {
+            padding: 3px 4px;
+        }
+
+        td#today {
+            color: $widget-text-color;
+            background-color: $widget-list-item-background-color;
+        }
+
+        tfoot a {
+            color: $widget-link-color;
+
+            &:hover {
+                color: $widget-link-hover-color;
+            }
+        }
+    }
+
+    // rss
+    &.widget_rss {
+
+        .rss-widget-icon {
+            display: inline-block;
+        }
+
+        .rss-date {
+            display: block;
+            margin-bottom: $widget-list-item-margin;
+        }
+
+        cite {
+            display: block;
+            margin-top: calc(#{$widget-list-item-margin} / 2);
+        }
+    }
+
+    // search
+    &.widget_search {
+
+        .input-holder {
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+
+            input,
+            button {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                box-sizing: border-box;
+                color: $widget-text-color;
+                display: inline-block;
+                float: left;
+                font-family: $default-text-font;
+                font-size: 15px;
+                font-weight: inherit;
+                height: $widget-search-form-height;
+                line-height: calc(#{$widget-search-form-height} - 2px);
+                outline: 0;
+                position: relative;
+                vertical-align: top;
+                -webkit-appearance: none;
+
+                @include mkdfTransition(color $quick-transition $theme-easing);
+            }
+
+            input.search-field {
+                width: calc(100% - #{$widget-search-form-height});
+                padding: 0 0 0 21px;
+
+                @include mkdfPlaceholder {
+                    color: #808080;
+                }
+            }
+
+            button {
+                background: $first-main-color;
+                color: #fff;
+                cursor: pointer;
+                font-size: 18px;
+                width: $widget-search-form-height;
+                padding: 0;
+
+                @include mkdfTransition(color $quick-transition $theme-easing);
+
+                &:hover {
+                    color: $widget-link-hover-color;
+                }
+
+                span {
+                    display: block;
+                    left: 0;
+                    line-height: inherit;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+
+                    &:before {
+                        display: block;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    // search post type
+    &.mkdf-search-post-type-widget {
+        .mkdf-post-type-search-field {
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+            background-color: transparent;
+            box-sizing: border-box;
+            color: $widget-text-color;
+            display: inline-block;
+            float: left;
+            font-family: $default-text-font;
+            font-size: 15px;
+            font-weight: inherit;
+            height: $widget-search-form-height;
+            line-height: calc(#{$widget-search-form-height} - 2px);
+            outline: 0;
+            position: relative;
+            vertical-align: top;
+            -webkit-appearance: none;
+            padding: 0 25px 0 20px;
+            width: 100%; /* width of loading icon */
+
+            @include mkdfTransition(color $quick-transition $theme-easing);
+
+            @include mkdfPlaceholder {
+                color: $widget-text-color;
+            }
+        }
+    }
+
+    // combobox
+    &.widget_archive,
+    &.widget_categories,
+    &.widget_text {
+
+        select {
+            background-color: transparent;
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+            border-radius: 0;
+            box-sizing: border-box;
+            color: $widget-text-color;
+            display: inline-block;
+            font-family: $default-text-font;
+            font-size: 15px;
+            font-weight: inherit;
+            height: $widget-search-form-height;
+            line-height: calc(#{$widget-search-form-height} - 2px);
+            margin-top: $widget-list-item-margin;
+            outline: 0;
+            padding: 0 0 0 21px;
+            position: relative;
+            vertical-align: top;
+            width: 100%;
+
+            @include mkdfTransition(color $quick-transition $theme-easing);
+
+            option {
+            }
+        }
+    }
+
+    // tag cloud
+    &.widget_tag_cloud {
+
+        a {
+            color: $widget-text-color;
+            display: inline-block;
+            font-size: 12px !important;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            line-height: $widget-tag-cloud-height;
+            text-transform: uppercase;
+            margin: 0 5px 2px 0;
+            letter-spacing: 0.2em;
+
+            &:hover {
+                color: $widget-link-hover-color;
+            }
+        }
+    }
+
+    &.mkdf-recent-post-widget{
+        .mkdf-recent-posts{
+            .mkdf-rp-item{
+                margin: 0 0 10px;
+                padding: $widget-list-item-margin;
+
+                a{
+                    display: table;
+                    width: 100%;
+
+                    .mkdf-rp-image,
+                    .mkdf-rp-title{
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    .mkdf-rp-title{
+                        @include mkdfTransition(color $quick-transition $theme-easing);
+                        font-weight: 600;
+                    }
+
+                    .mkdf-rp-image{
+                        padding-right: 20px;
+                        width: 56px;
+                        height: 56px;
+                        img{
+                            display: block;
+                        }
+                    }
+
+                    &:hover{
+                        .mkdf-rp-title{
+                            color: $default-text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

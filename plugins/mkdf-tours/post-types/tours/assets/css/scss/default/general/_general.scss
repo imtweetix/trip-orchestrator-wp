@@ -1,0 +1,190 @@
+/* General styles
+========================================================================== */
+.mkdf-tours-price-holder {
+	color: $first-main-color;
+}
+
+.mkdf-tour-item-label {
+    font-family: 'Kristi';
+    color: $first-main-color;
+    font-size: 40px;
+    position: absolute;
+}
+
+.mkdf-tour-rating-rate {
+	vertical-align: middle;
+}
+
+.mkdf-tour-rating-label {
+	vertical-align: middle;
+}
+
+.mkdf-tours-price-with-discount {
+	.mkdf-tours-price-old.mkdf-tours-item-price{
+        font-size: 20px;
+        color: #c2c2c2;
+        text-decoration: line-through;
+		margin-right: 5px;
+
+        .single-tour-item & {
+            font-size: 30px;
+        }
+
+
+	}
+}
+
+
+.mkdf-boxed-widget {
+	padding: 30px 30px 35px;
+	background-color: #f9f9f9;
+	
+	&.mkdf-tours-search-main-filters-holder {
+		position: relative;
+		margin: 100px 0 28px;
+        background-image: url("../img/booking-sidebar-image.png");
+
+		.mkdf-btn {
+
+		}
+	}
+}
+
+%booking-input-style {
+	position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 13px 24px 12px 35px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: inherit;
+    color: $default-text-color;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+	cursor: pointer;
+    box-sizing: border-box;
+    @include mkdfTransition(border-color $quick-transition $theme-easing);
+
+    &:focus {
+        color: $default-heading-color;
+    }
+    
+    @include mkdfPlaceholder {
+        color: inherit;
+    }
+}
+
+.mkdf-tours-input-with-icon {
+	position: relative;
+	margin-bottom: 15px;
+
+	textarea,
+	select,
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='number']{
+	    @extend %booking-input-style;
+	}
+
+	textarea {
+        display: block;
+        padding: 10px;
+        resize: vertical;
+	}
+	
+	input[type=text].mkdf-tours-price-range-field {
+		background-color: transparent;
+		padding: 0;
+	}
+
+	select {
+		-moz-appearance: none;
+	}
+
+    .select2-container--default {
+        width: 100% !important;
+        background-color: #fff;
+        .select2-selection--single {
+
+            .mkdf-tours-search-horizontal-filters-holder & {
+
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #303030;
+                letter-spacing: .025em;
+                height: 52px;
+                line-height: 50px;
+                padding: 0 45px;
+                .select2-selection__rendered {
+                    padding: 0;
+                }
+
+            }
+
+            .mkdf-tours-filter-vertical &, .mkdf-boxed-widget & {
+                padding-left: 43px;
+                .select2-selection__rendered {
+                    padding-left: 0;
+                }
+            }
+
+            .select2-selection__arrow {
+                font-size: 14px;
+                &:before {
+                    content: "\43";
+                    font-family: "ElegantIcons";
+                }
+            }
+        }
+    }
+
+    .ion-calendar {
+        position: relative;
+        left: -3px;
+    }
+
+    .tt-menu {
+        color: $default-text-color;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        left: 0 !important;
+
+        .tt-dataset {
+            padding: 7px 23px;
+
+            .tt-suggestion {
+                padding: 7px 0;
+                font-size: 16px;
+                line-height: 27px;
+                font-weight: 400;
+                color: $default-text-color;
+                background-color: #fff;
+                @include mkdfTransition(color .2s ease-out);
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+        }
+    }
+}
+
+.mkdf-tours-input-icon {
+	position: absolute;
+	left: 11px;
+    top: 25px;
+	width: auto;
+	font-size: 18px;
+	color: $first-main-color;
+	z-index: 1;
+	@include mkdfTransform(translateY(-50%));
+}
+
+/* General styles end
+========================================================================== */

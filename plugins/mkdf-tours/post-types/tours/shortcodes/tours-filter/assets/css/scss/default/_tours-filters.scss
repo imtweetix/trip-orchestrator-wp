@@ -1,0 +1,198 @@
+.mkdf-tours-filter-vertical {
+    &.mkdf-tours-filter-skin-white {
+        .mkdf-boxed-widget {
+            background-color: #fff;
+
+            .mkdf-tours-input-with-icon {
+                background-color: #f5f6f6;
+            }
+        }
+    }
+}
+
+.mkdf-tours-full-width-filter {
+
+    .mkdf-container {
+        background-color: transparent;
+    }
+}
+
+.mkdf-tours-filter-horizontal {
+    background-color: #fff;
+
+    &.mkdf-tours-filter-skin-light {
+        background-color: #fff;
+
+        &.mkdf-tours-filter-semitransparent {
+            background-color: rgba(#fff, 0.8);
+        }
+    }
+
+    &.mkdf-tours-filter-skin-dark {
+        background-color: #303030;
+
+        &.mkdf-tours-filter-semitransparent {
+            background-color: rgba(#282828, 0.8);
+        }
+
+        .mkdf-tours-filters-fields-holder .mkdf-tours-filter-submit-field-holder input[type="submit"]:hover {
+            background-color: #fafafa !important;
+            color: $default-heading-color !important;
+            border-color: #fafafa !important;
+        }
+    }
+
+
+
+
+
+    .mkdf-grid {
+        padding: 25px 45px;
+        box-sizing: border-box;
+    }
+
+    @include ipad-landscape {
+
+        .mkdf-grid {
+            width: 100%;
+        }
+    }
+
+    .mkdf-tours-search-horizontal-filters-holder {
+        &:before,
+        &:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        &:after {
+            clear: both;
+        }
+
+        & {
+            *zoom: 1;
+        }
+    }
+
+    .mkdf-tours-filters-fields-holder {
+        float: left;
+        width: 100%;
+        padding: 28px 48px;
+        box-sizing: border-box;
+
+        .mkdf-tours-filter-field-holder {
+
+            //            &:not(.mkdf-tours-filter-submit-field-holder) {
+            //                border: 1px solid #e2e2e2;
+            //
+            //                @include phone-portrait-plus-pixel {
+            //                    border-right: 0;
+            //                }
+            //
+            //                @include phone-portrait {
+            //                    border-bottom: 0;
+            //                }
+            //            }
+
+            &:before,
+            &:after {
+                content: " "; /* 1 */
+                display: table; /* 2 */
+            }
+
+            &:after {
+                clear: both;
+            }
+
+            & {
+                *zoom: 1;
+            }
+        }
+
+        .mkdf-tours-filter-submit-field-holder {
+            width: 15%;
+            border-right: none;
+
+            @include ipad-portrait {
+                width: 100%;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                min-width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                max-height: 56px;
+                line-height: 2.2em;//
+            }
+        }
+
+        .mkdf-tours-input-with-icon {
+            width: 100%;
+            margin-bottom: 0;
+            padding: 0;
+            float: left;
+            box-sizing: border-box;
+
+            input[type=text],
+            input[type=number],
+            select {
+                padding: 15px 45px;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: $default-heading-color;
+                letter-spacing: 0.025em;
+                height: 52px;
+
+                @include phone-portrait-plus-pixel {
+                    border-right: 0;
+                }
+
+                @include phone-portrait {
+                    border-bottom: 0;
+                }
+
+            }
+
+            .mkdf-tours-input-icon {
+                left: 25px;
+            }
+        }
+    }
+
+    .mkdf-tours-filter-col {
+        float: left;
+        width: 28.33333333333333%;
+        box-sizing: border-box;
+        margin-right: -1px;
+
+        @include laptop-landscape-large {
+            width: 25%;
+            &.mkdf-tours-filter-submit-field-holder {
+                width: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 949px) {
+            width: 33.3333%;
+
+
+            &:nth-child(3) .mkdf-tours-input-with-icon  {
+                input[type="number"],
+                input[type="text"],
+                select {
+                    border-right: 1px solid #ebebeb;
+                }
+            }
+
+            &.mkdf-tours-filter-submit-field-holder {
+                width: 100%;
+            }
+        }
+
+        @include phone-portrait {
+            width: 100%;
+        }
+    }
+}

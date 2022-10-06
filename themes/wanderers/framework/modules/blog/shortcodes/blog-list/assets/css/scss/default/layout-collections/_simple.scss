@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Blog List shortcode - Simple type style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+    
+    &.mkdf-bl-simple {
+        
+        .mkdf-post-image {
+            display: table-cell;
+            vertical-align: top;
+            width: 60px;
+        }
+        
+        .mkdf-bli-content {
+            display: table-cell;
+            vertical-align: top;
+            width: auto;
+            padding-left: 25px;
+            
+            .mkdf-post-info-date {
+                display: block;
+                margin: 7px 0 0;
+                line-height: 1;
+
+                .icon_calendar{
+                    display: none;
+                }
+                
+                a {
+                    font-size: 15px;
+                    color: $default-text-color;
+
+                    footer &,
+                    .mkdf-side-menu & {
+                        color: #c2c2c2;
+                    }
+                    
+                    &:hover {
+                        color: $default-heading-color;
+
+                        footer &,
+                        .mkdf-side-menu & {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List shortcode - Simple type style - end
+   ========================================================================== */

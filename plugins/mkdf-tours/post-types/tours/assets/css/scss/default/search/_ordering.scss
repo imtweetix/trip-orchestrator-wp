@@ -1,0 +1,111 @@
+.mkdf-tours-search-content .mkdf-social-share-holder .mkdf-icon-name {
+	display: none;
+}
+
+.mkdf-search-ordering-holder {
+    display: block;
+    margin: 0 auto;
+
+    .mkdf-search-ordering-list {
+		position: relative;
+		display: table;
+        width: 100%;
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		vertical-align: middle;
+
+		li {
+			display: table-cell;
+			vertical-align: middle;
+            width: 25%;
+			
+			&:first-child {
+				
+				a {
+					
+					&:before {
+						display: none;
+					}
+				}
+			}
+			
+			&:last-child {
+				
+				a {
+					border-right: none;
+				}
+			}
+			
+			&.mkdf-search-ordering-item-active {
+				
+				a {
+					color: $first-main-color;
+					background-color: #fff;
+					border-color: #fff;
+
+                    .mkdf-search-ordering-title{
+                        color: $first-main-color;
+                    }
+					
+					&:before {
+						display: block;
+					}
+				}
+			}
+
+			a {
+				position: relative;
+				display: block;
+				margin: 0;
+				padding: 15px 25px;
+				width: auto;
+				font-size: 12px;
+				font-weight: 600;
+				color: $default-text-color;
+				background-color: #f6f6f6;
+				border: none;
+				border-right: 1px solid #eaeaea;
+				text-align: left;
+				box-sizing: border-box;
+				@include mkdfTransition(color 0.2s ease-in-out, background-color 0.2s ease-in-out, margin 0.2s ease-in-out, padding 0.2s ease-in-out);
+				
+				&:before {
+					content: '';
+					position: absolute;
+					display: none;
+					bottom: 0;
+					left: -1px;
+					width: 1px;
+					height: 100%;
+					background-color: #fff;
+					z-index: 1;
+				}
+				
+				&:hover {
+					color: $first-main-color;
+				}
+				
+				.mkdf-search-ordering-icon {
+					display: inline-block;
+                    width: auto;
+					font-size: 18px;
+					line-height: 1em;
+                    margin-right: 14px;
+                    color: $first-main-color;
+                    position: relative;
+                    top: 2px;
+				}
+				
+				.mkdf-search-ordering-title {
+					display: inline-block;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $default-heading-color;
+                    letter-spacing: 0.025em;
+				}
+			}
+		}
+	}
+}

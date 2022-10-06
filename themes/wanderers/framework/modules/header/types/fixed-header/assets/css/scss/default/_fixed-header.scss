@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Fixed header style - begin
+   ========================================================================== */
+
+.mkdf-page-header {
+    
+    .mkdf-fixed-wrapper {
+        
+        &.fixed {
+            position: fixed;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+            -webkit-backface-visibility: hidden;
+            
+            .admin-bar & {
+                top: 32px;
+            }
+	
+	        .mkdf-menu-area {
+		        background-color: #fff;
+	        }
+        }
+    }
+}
+/* ==========================================================================
+   Fixed header style - end
+   ========================================================================== */

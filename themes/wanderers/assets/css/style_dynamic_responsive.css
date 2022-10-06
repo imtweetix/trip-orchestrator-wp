@@ -1,0 +1,29 @@
+@media only screen and (max-width: 1024px){
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/assets/custom-styles/general-custom-styles-responsive.php wanderers_mkdf_content_responsive_styles function */
+.mkdf-content .mkdf-content-inner > .mkdf-container > .mkdf-container-inner, .mkdf-content .mkdf-content-inner > .mkdf-full-width > .mkdf-full-width-inner { padding-top: 90px!important;}
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+}
+
+@media only screen and (min-width: 681px) and (max-width: 768px){
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/assets/custom-styles/general-custom-styles-responsive.php wanderers_mkdf_h1_responsive_styles function */
+h1 { font-size: 50px;line-height: 1em;}
+
+}
+
+@media only screen and (max-width: 680px){
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/assets/custom-styles/general-custom-styles-responsive.php wanderers_mkdf_h1_responsive_styles2 function */
+h1 { font-size: 35px;line-height: 1em;}
+
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/assets/custom-styles/general-custom-styles-responsive.php wanderers_mkdf_h2_responsive_styles2 function */
+h2 { font-size: 30px;}
+
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/framework/modules/error404/custom-styles/custom-styles.php wanderers_mkdf_404_title_styles_responsive function */
+.error404 .mkdf-page-not-found .mkdf-404-title { font-size: 130px;line-height: 150px;}
+
+/* generated in /var/www/vhosts/lvlupstudios.com/triporc.lvlupstudios.com/wp-content/themes/wanderers/framework/modules/error404/custom-styles/custom-styles.php wanderers_mkdf_404_subtitle_styles_responsive function */
+.error404 .mkdf-page-not-found .mkdf-404-subtitle { font-size: 45px;line-height: 55px;}
+
+}

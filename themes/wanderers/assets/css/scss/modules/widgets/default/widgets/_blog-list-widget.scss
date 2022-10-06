@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+
+.widget.mkdf-blog-list-widget {
+    margin: 0 0 20px;
+
+    .mkdf-blog-list-holder {
+
+        .mkdf-bl-item {
+            .mkdf-post-image {
+                overflow: hidden;
+                img {
+                    @include mkdfTransition(transform $quick-transition $theme-easing);
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                }
+            }
+            &:hover {
+                .mkdf-post-image {
+                    img {
+                        @include mkdfTransform(scale(1.1));
+                    }
+                }
+            }
+        }
+
+        .mkdf-post-image a:after {
+            content: normal;
+        }
+    }
+
+    > h4 {
+        margin: 0 0 15px;
+    }
+
+    footer .mkdf-footer-top &,
+    .mkdf-top-bar & {
+
+        > h2 {
+            margin: 0 0 8px;
+        }
+    }
+
+    footer & {
+        .mkdf-post-title {
+            color: #bdbdbd;
+            a {
+                color: #bdbdbd;
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .mkdf-side-menu & {
+        .mkdf-post-title {
+            color: #fff;
+        }
+    }
+
+    .mkdf-blog-list-holder.mkdf-bl-minimal .mkdf-post-info-date {
+        a {
+            color: #6b6b6b;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .icon_calendar,
+    .icon_chat {
+        display: none;
+    }
+}
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */

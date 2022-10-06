@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Title responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+    
+    .mkdf-title-holder {
+        
+        &.mkdf-has-bg-image {
+            height: auto !important; // because of inline style
+	        background-image: none !important; // because of inline style
+    
+            .mkdf-title-image {
+                display: block;
+            }
+    
+            .mkdf-title-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 0;
+	            height: 100% !important;
+                @include mkdfTransform(translateY(-50%));
+            }
+        }
+        
+        &.mkdf-title-va-header-bottom {
+            height: auto !important; // because of inline style
+	        
+            .mkdf-title-wrapper {
+                padding-top: 0 !important; // because of inline style
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Title responsive style - end
+   ========================================================================== */

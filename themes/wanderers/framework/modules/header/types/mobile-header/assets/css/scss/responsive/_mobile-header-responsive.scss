@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Mobile header responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+
+    .mkdf-mobile-header {
+        display: block;
+    }
+}
+
+@include phone-portrait {
+    .mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li {
+
+        > a,
+        > h6 {
+            padding-left: 4px;
+            font-size: 14px;
+        }
+
+    }
+}
+
+/* ==========================================================================
+   Mobile header responsive style - end
+   ========================================================================== */

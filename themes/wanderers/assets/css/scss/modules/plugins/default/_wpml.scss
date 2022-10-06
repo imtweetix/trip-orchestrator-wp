@@ -1,0 +1,404 @@
+/* ==========================================================================
+   WPML style start
+   ========================================================================== */
+%wpml-dropdown-styles {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 180px;
+    text-align: left;
+    box-sizing: border-box;
+
+    .wpml-ls-item-toggle {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            a {
+                display: block;
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: -26px;
+            width: 140px;
+            padding: 23px 0 25px;
+            background-color: #1c1c1c;
+            border: 1px solid #1c1c1c;
+            border-top: none;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            box-sizing: border-box;
+            @include mkdfTransition(visibility 0s linear 0.25s, opacity 0.25s ease-in-out);
+
+            a {
+                padding: 7px 35px;
+                color: #bbb;
+                line-height: 16px;
+                font-family: Montserrat,sans-serif;
+                font-weight: 700;
+                font-size: 10px;
+                letter-spacing: .2em;
+                text-transform: uppercase;
+
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        ul ul {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+    }
+}
+
+%wpml-list-horizontal-styles {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+
+            &:last-child {
+                margin: 0 0 5px;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+%wpml-list-vertical-styles {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: block;
+            margin: 0;
+            padding: 3px 0;
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.widget_icl_lang_sel_widget {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+        position: relative;
+        display: inline-block !important;
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        top: -1px;
+    }
+
+    .wpml-ls-legacy-dropdown,
+    .wpml-ls-legacy-dropdown-click {
+        @extend %wpml-dropdown-styles;
+    }
+
+    .wpml-ls-legacy-list-horizontal {
+        @extend %wpml-list-horizontal-styles;
+    }
+
+    .wpml-ls-legacy-list-vertical {
+        @extend %wpml-list-vertical-styles;
+    }
+}
+
+.mkdf-sidebar,
+.wpb_widgetised_column,
+.mkdf-page-footer,
+.mkdf-side-menu {
+    .widget_icl_lang_sel_widget {
+        width: 100%;
+
+        .wpml-ls-legacy-dropdown,
+        .wpml-ls-legacy-dropdown-click {
+            width: 100%;
+        }
+    }
+}
+
+.mkdf-page-footer {
+    .widget_icl_lang_sel_widget {
+        .wpml-ls-legacy-dropdown,
+        .wpml-ls-legacy-dropdown-click {
+            .wpml-ls-item-toggle {
+                border-color: #fff;
+            }
+
+            ul {
+                li {
+                    a {
+                        color: #999;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                ul {
+                    background-color: $default-heading-color;
+                    border-color: #fff;
+                }
+            }
+        }
+
+        .wpml-ls-legacy-list-horizontal {
+            ul {
+                li {
+                    a {
+                        color: #999;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wpml-ls-legacy-list-vertical {
+            ul {
+                li {
+                    a {
+                        color: #999;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mkdf-top-bar {
+    .widget_icl_lang_sel_widget {
+        .wpml-ls-legacy-dropdown,
+        .wpml-ls-legacy-dropdown-click {
+            width: auto;
+            min-width: 20px;
+
+            .wpml-ls-item-toggle {
+                padding: 0 0 0 10px;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 10px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+
+                i{
+                    position: relative;
+                    font-size: 16px;
+                    top: 2px;
+                }
+            }
+        }
+
+        .wpml-ls-legacy-list-horizontal {
+            ul {
+                li {
+                    margin: 0 15px 0 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wpml-ls-legacy-list-vertical {
+            ul {
+                li {
+                    float: left;
+                    margin: 0 15px 0 0;
+                    padding: 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mkdf-menu-area {
+    .widget_icl_lang_sel_widget {
+        .wpml-ls-legacy-list-horizontal {
+            ul {
+                li {
+                    margin: 0 20px 0 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .wpml-ls-legacy-list-vertical {
+            ul {
+                li {
+                    float: left;
+                    margin: 0 20px 0 0;
+                    padding: 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mkdf-main-menu {
+    > ul > li.menu-item-language > a {
+        span {
+            position: relative;
+            display: block;
+            top: 50%;
+
+            @include mkdfTransform(translateY(-50%));
+
+            img {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                top: -1px;
+                margin: 0 5px 0 0;
+            }
+
+            &:after {
+                content: '\33';
+                font-family: 'ElegantIcons', serif;
+                position: absolute;
+                right: -15px;
+                top: 50%;
+                display: block;
+
+                @include mkdfTransform(translateY(-50%));
+            }
+        }
+    }
+
+    .menu-item-language {
+        .submenu-languages {
+            position: absolute;
+            top: 100%;
+            width: 200px;
+            left: 0;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            border-top: none;
+            padding: 18px 0;
+            text-align: left;
+            background-color: #fff;
+            border-top: 1px solid $default-border-color;
+            box-sizing: border-box;
+
+            @include mkdfTransition(visibility 0s linear 0.25s, opacity 0.25s ease-in-out);
+
+            li {
+                display: block;
+                width: 100%;
+                float: none;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            a {
+                display: block;
+                padding: 9px 26px;
+                color: $default-text-color;
+
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+
+            img {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                top: -1px;
+                margin: 0 5px 0 0;
+            }
+        }
+
+        &:hover {
+            ul {
+                opacity: 1;
+                visibility: visible;
+
+                -webkit-transition-delay: 0s;
+                -moz-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   WPML style start
+   ========================================================================== */

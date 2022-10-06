@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Social Icons Group widget style - begin
+   ========================================================================== */
+
+.mkdf-social-icons-group-widget {
+
+	&.mkdf-square-icons {
+
+		.mkdf-social-icon-widget-holder {
+			position: relative;
+			width: 44px;
+			height: 44px;
+			margin: 0 7px;
+			font-size: 17px;
+			color: #fff;
+			background-color: $default-heading-color;
+
+			&:hover {
+				color: $default-heading-color;
+				background-color: $first-main-color;
+			}
+
+			.mkdf-social-icon-widget {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include mkdfTransform(translateY(-50%) translateX(-50%));
+			}
+		}
+
+		&.mkdf-light-skin {
+
+			.mkdf-social-icon-widget-holder {
+				color: $default-heading-color;
+				background-color: #fff;
+
+				&:hover {
+					color: $default-heading-color;
+					background-color: $first-main-color;
+				}
+			}
+		}
+	}
+
+	.mkdf-social-icon-widget-holder {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px 0 0;
+		text-align: center;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Social Icons Group widget style - end
+   ========================================================================== */

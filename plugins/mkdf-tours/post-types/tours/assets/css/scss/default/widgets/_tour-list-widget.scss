@@ -1,0 +1,53 @@
+.mkdf-tour-list-widget{
+
+    .mkdf-widget-title-holder {
+        margin-bottom: 28px !important; /* overwrite sidebar margins */
+    }
+
+    .mkdf-tours-standard-item{
+        display: table;
+    }
+
+    .mkdf-tours-standard-item-image-holder{
+        display: table-cell;
+        vertical-align: middle;
+        width: 85px;
+        .mkdf-tours-standard-item-label-holder {
+            display: none;
+        }
+    }
+
+    .mkdf-tours-standard-item-content-holder{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+        box-sizing: border-box;
+
+        .mkdf-tours-standard-item-content-inner{
+            padding: 0;
+
+            .mkdf-tours-standard-item-excerpt{
+                display: none;
+            }
+        }
+        .mkdf-tours-standard-item-bottom-content{
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+
+    .mkdf-tours-item-price-additional-text {
+        display: none;
+    }
+
+    .mkdf-tours-standard-item-title-price-holder {
+        margin-bottom: 0;
+    }
+}
+
+.mkdf-tour-categories-widget {
+    .mkdf-tour-categories-list-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
