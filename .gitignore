@@ -6,3 +6,9 @@ temp/
 
 # ignore ALL .vscode config folders
 .vscode/
+
+# ignore ALL sass .map files
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
